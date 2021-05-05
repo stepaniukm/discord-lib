@@ -1,0 +1,1988 @@
+[0m2021.04.27 23:26:04 INFO  Started: Metals version 0.10.2 in workspace '/home/mateusz/Projekty/scala-cats-test/cats-test' for client vscode 1.55.2.[0m
+[0m2021.04.27 23:26:06 INFO  time: initialize in 2.51s[0m
+[0m2021.04.27 23:26:08 WARN  Build server is not auto-connectable.[0m
+[0m2021.04.27 23:26:08 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/build.sbt[0m
+[0m2021.04.27 23:26:11 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals6566691992876354284/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.27 23:26:11 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/metals.sbt[0m
+[0m2021.04.27 23:26:11 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/metals.sbt[0m
+[0m2021.04.27 23:26:11 INFO  skipping build import with status 'Started'[0m
+[0m2021.04.27 23:26:16 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.27 23:26:25 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:26:27 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.27 23:26:31 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.27 23:26:32 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/plugins.sbt[0m
+[0m2021.04.27 23:26:32 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/plugins.sbt[0m
+[0m2021.04.27 23:26:32 INFO  skipping build import with status 'Started'[0m
+Apr 27, 2021 11:26:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+Apr 27, 2021 11:26:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15
+[0m2021.04.27 23:26:36 INFO  time: code lens generation in 3.9s[0m
+[0m2021.04.27 23:26:37 INFO  time: code lens generation in 25s[0m
+[0m2021.04.27 23:26:37 INFO  time: code lens generation in 28s[0m
+[0m2021.04.27 23:26:37 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/build.sbt[0m
+[0m2021.04.27 23:26:49 INFO  [info] loading settings for project cats-test-build from metals.sbt ...[0m
+Apr 27, 2021 11:26:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 28
+[0m2021.04.27 23:26:49 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.27 23:26:52 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/plugins.sbt[0m
+[0m2021.04.27 23:26:52 INFO  skipping build import with status 'Dismissed'[0m
+[0m2021.04.27 23:27:05 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.27 23:27:05 INFO  [info] compiling 1 Scala source to /home/mateusz/Projekty/scala-cats-test/cats-test/project/target/scala-2.12/sbt-1.0/classes ...[0m
+[0m2021.04.27 23:27:05 INFO  [info] Non-compiled module 'compiler-bridge_2.12' for Scala 2.12.13. Compiling...[0m
+[0m2021.04.27 23:27:29 INFO  [info]   Compilation completed in 23.746s.[0m
+[0m2021.04.27 23:27:31 INFO  [info] done compiling[0m
+[0m2021.04.27 23:27:31 INFO  [success] Total time: 42 s, completed Apr 27, 2021, 11:27:32 PM[0m
+[0m2021.04.27 23:27:38 INFO  [info] loading settings for project root from build.sbt,plugins.sbt ...[0m
+[0m2021.04.27 23:27:38 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.27 23:27:39 INFO  [warn] [0m
+[0m2021.04.27 23:27:39 INFO  [warn] 	Note: Some unresolved dependencies have extra attributes.  Check that these dependencies exist with the requested attributes.[0m
+[0m2021.04.27 23:27:39 INFO  [warn] 		org.lyranthe.sbt:partial-unification:1.1.2 (sbtVersion=1.0, scalaVersion=2.13)[0m
+[0m2021.04.27 23:27:39 INFO  [warn] [0m
+[0m2021.04.27 23:27:39 INFO  [warn] 	Note: Unresolved dependencies path:[0m
+[0m2021.04.27 23:27:39 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading org.lyranthe.sbt:partial-unification;sbtVersion=1.0;scalaVersion=2.13:1.1.2[0m
+[0m2021.04.27 23:27:39 INFO  [error]   Not found[0m
+[0m2021.04.27 23:27:39 INFO  [error]   Not found[0m
+[0m2021.04.27 23:27:39 INFO  [error]   not found: /home/mateusz/.ivy2/localorg.lyranthe.sbt/partial-unification/scala_2.13/sbt_1.0/1.1.2/ivys/ivy.xml[0m
+[0m2021.04.27 23:27:39 INFO  [error]   not found: https://repo1.maven.org/maven2/org/lyranthe/sbt/partial-unification_2.13_1.0/1.1.2/partial-unification-1.1.2.pom[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:258)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:227)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:227)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:59)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:133)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:73)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:146)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:146)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:127)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:219)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:160)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3670)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.Execute.work(Execute.scala:291)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)[0m
+[0m2021.04.27 23:27:39 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:832)[0m
+[0m2021.04.27 23:27:39 INFO  [error] (update) sbt.librarymanagement.ResolveException: Error downloading org.lyranthe.sbt:partial-unification;sbtVersion=1.0;scalaVersion=2.13:1.1.2[0m
+[0m2021.04.27 23:27:39 INFO  [error]   Not found[0m
+[0m2021.04.27 23:27:39 INFO  [error]   Not found[0m
+[0m2021.04.27 23:27:39 INFO  [error]   not found: /home/mateusz/.ivy2/localorg.lyranthe.sbt/partial-unification/scala_2.13/sbt_1.0/1.1.2/ivys/ivy.xml[0m
+[0m2021.04.27 23:27:39 INFO  [error]   not found: https://repo1.maven.org/maven2/org/lyranthe/sbt/partial-unification_2.13_1.0/1.1.2/partial-unification-1.1.2.pom[0m
+[0m2021.04.27 23:27:39 INFO  [error] Total time: 1 s, completed Apr 27, 2021, 11:27:39 PM[0m
+[0m2021.04.27 23:27:39 INFO  sbt bloopInstall exit: 1[0m
+[0m2021.04.27 23:27:40 INFO  time: ran 'sbt bloopInstall' in 1m29s[0m
+[0m2021.04.27 23:27:40 ERROR sbt command failed: /home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals6566691992876354284/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall[0m
+Apr 27, 2021 11:28:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 40
+Apr 27, 2021 11:28:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 46
+[0m2021.04.27 23:29:04 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.04.27 23:29:10 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.04.27 23:29:27 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Apr 27, 2021 11:29:27 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:32 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:33 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:33 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:34 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+Apr 27, 2021 11:29:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+file%3A%2F%2F%2Fhome%2Fmateusz%2FProjekty%2Fscala-cats-test%2Fcats-test%2Fsrc%2Fmain%2Fscala%2Fexample%2FHello.scala:4: error: { expected but \n\n found
+
+^
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:16)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.Reporter.syntaxError(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter.syntaxError$(Reporter.scala:17)
+	at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:22)
+	at scala.meta.internal.parsers.ScalametaParser.syntaxErrorExpected(ScalametaParser.scala:855)
+	at scala.meta.internal.parsers.ScalametaParser.accept(ScalametaParser.scala:861)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrError(ScalametaParser.scala:741)
+	at scala.meta.internal.parsers.ScalametaParser.inBracesOrNil(ScalametaParser.scala:759)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageDef$1(ScalametaParser.scala:4994)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageDef(ScalametaParser.scala:4992)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$packageOrPackageObjectDef$1(ScalametaParser.scala:4989)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.packageOrPackageObjectDef(ScalametaParser.scala:4986)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4849)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4843)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4833)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4842)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:5056)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:5022)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:5005)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:820)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:836)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:5004)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:5010)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:142)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:52)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:142)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$257.apply(ScalametaParser.scala:5067)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.semanticdb.scalac.ParseOps$XtensionCompilationUnitSource.toSource(ParseOps.scala:17)
+	at scala.meta.internal.semanticdb.scalac.TextDocumentOps$XtensionCompilationUnitDocument.toTextDocument(TextDocumentOps.scala:201)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:51)
+
+[0m2021.04.27 23:29:38 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.04.27 23:29:43 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.04.27 23:29:50 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals17951508545436783452/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.27 23:29:51 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals15151343801681214387/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.27 23:29:51 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals295817950102999169/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.27 23:29:53 ERROR [info] waiting for lock on /home/mateusz/.sbt/boot/sbt.boot.lock to be available...[0m
+[0m2021.04.27 23:29:53 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.27 23:29:58 INFO  sbt bloopInstall exit: 2[0m
+[0m2021.04.27 23:29:58 INFO  time: ran 'sbt bloopInstall' in 6.19s[0m
+[0m2021.04.27 23:29:58 ERROR sbt command failed: /home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals295817950102999169/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall[0m
+[0m2021.04.27 23:29:58 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:30:00 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.27 23:30:02 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.27 23:30:04 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:30:06 INFO  [info] loading settings for project cats-test-build from metals.sbt ...[0m
+[0m2021.04.27 23:30:07 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.27 23:30:06 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.27 23:30:11 INFO  [info] loading settings for project cats-test-build from metals.sbt ...[0m
+[0m2021.04.27 23:30:11 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.27 23:30:13 ERROR [info] waiting for lock on /home/mateusz/.ivy2/exclude_classifiers.lock to be available...[0m
+[0m2021.04.27 23:30:15 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.27 23:30:16 INFO  [success] Total time: 8 s, completed Apr 27, 2021, 11:30:16 PM[0m
+[0m2021.04.27 23:30:17 INFO  [info] loading settings for project root from build.sbt,plugins.sbt ...[0m
+[0m2021.04.27 23:30:19 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.27 23:30:23 INFO  [warn] [0m
+[0m2021.04.27 23:30:23 INFO  [warn] 	Note: Some unresolved dependencies have extra attributes.  Check that these dependencies exist with the requested attributes.[0m
+[0m2021.04.27 23:30:23 INFO  [warn] 		org.lyranthe.sbt:partial-unification:1.1.2 (sbtVersion=1.0, scalaVersion=2.13)[0m
+[0m2021.04.27 23:30:23 INFO  [warn] [0m
+[0m2021.04.27 23:30:23 INFO  [warn] 	Note: Unresolved dependencies path:[0m
+[0m2021.04.27 23:30:23 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading org.lyranthe.sbt:partial-unification;sbtVersion=1.0;scalaVersion=2.13:1.1.2[0m
+[0m2021.04.27 23:30:23 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:23 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:23 INFO  [error]   not found: /home/mateusz/.ivy2/localorg.lyranthe.sbt/partial-unification/scala_2.13/sbt_1.0/1.1.2/ivys/ivy.xml[0m
+[0m2021.04.27 23:30:23 INFO  [error]   not found: https://repo1.maven.org/maven2/org/lyranthe/sbt/partial-unification_2.13_1.0/1.1.2/partial-unification-1.1.2.pom[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:258)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:227)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:227)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:59)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:133)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:73)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:146)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:146)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:127)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:219)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:160)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3670)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.Execute.work(Execute.scala:291)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)[0m
+[0m2021.04.27 23:30:23 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:832)[0m
+[0m2021.04.27 23:30:23 INFO  [error] (update) sbt.librarymanagement.ResolveException: Error downloading org.lyranthe.sbt:partial-unification;sbtVersion=1.0;scalaVersion=2.13:1.1.2[0m
+[0m2021.04.27 23:30:23 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:23 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:23 INFO  [error]   not found: /home/mateusz/.ivy2/localorg.lyranthe.sbt/partial-unification/scala_2.13/sbt_1.0/1.1.2/ivys/ivy.xml[0m
+[0m2021.04.27 23:30:23 INFO  [error]   not found: https://repo1.maven.org/maven2/org/lyranthe/sbt/partial-unification_2.13_1.0/1.1.2/partial-unification-1.1.2.pom[0m
+[0m2021.04.27 23:30:23 INFO  [error] Total time: 3 s, completed Apr 27, 2021, 11:30:24 PM[0m
+[0m2021.04.27 23:30:25 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.27 23:30:25 INFO  sbt bloopInstall exit: 1[0m
+[0m2021.04.27 23:30:25 INFO  time: ran 'sbt bloopInstall' in 34s[0m
+[0m2021.04.27 23:30:25 ERROR sbt command failed: /home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals17951508545436783452/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall[0m
+[0m2021.04.27 23:30:26 INFO  [success] Total time: 14 s, completed Apr 27, 2021, 11:30:26 PM[0m
+[0m2021.04.27 23:30:26 INFO  [info] loading settings for project root from build.sbt,plugins.sbt ...[0m
+[0m2021.04.27 23:30:27 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.27 23:30:28 INFO  [warn] [0m
+[0m2021.04.27 23:30:28 INFO  [warn] 	Note: Some unresolved dependencies have extra attributes.  Check that these dependencies exist with the requested attributes.[0m
+[0m2021.04.27 23:30:28 INFO  [warn] 		org.lyranthe.sbt:partial-unification:1.1.2 (sbtVersion=1.0, scalaVersion=2.13)[0m
+[0m2021.04.27 23:30:28 INFO  [warn] [0m
+[0m2021.04.27 23:30:28 INFO  [warn] 	Note: Unresolved dependencies path:[0m
+[0m2021.04.27 23:30:28 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading org.lyranthe.sbt:partial-unification;sbtVersion=1.0;scalaVersion=2.13:1.1.2[0m
+[0m2021.04.27 23:30:28 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:28 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:28 INFO  [error]   not found: /home/mateusz/.ivy2/localorg.lyranthe.sbt/partial-unification/scala_2.13/sbt_1.0/1.1.2/ivys/ivy.xml[0m
+[0m2021.04.27 23:30:28 INFO  [error]   not found: https://repo1.maven.org/maven2/org/lyranthe/sbt/partial-unification_2.13_1.0/1.1.2/partial-unification-1.1.2.pom[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:258)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:227)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:227)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:59)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:133)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:73)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:146)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:146)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:127)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:219)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:160)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3670)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.Execute.work(Execute.scala:291)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)[0m
+[0m2021.04.27 23:30:28 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:832)[0m
+[0m2021.04.27 23:30:28 INFO  [error] (update) sbt.librarymanagement.ResolveException: Error downloading org.lyranthe.sbt:partial-unification;sbtVersion=1.0;scalaVersion=2.13:1.1.2[0m
+[0m2021.04.27 23:30:28 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:28 INFO  [error]   Not found[0m
+[0m2021.04.27 23:30:28 INFO  [error]   not found: /home/mateusz/.ivy2/localorg.lyranthe.sbt/partial-unification/scala_2.13/sbt_1.0/1.1.2/ivys/ivy.xml[0m
+[0m2021.04.27 23:30:28 INFO  [error]   not found: https://repo1.maven.org/maven2/org/lyranthe/sbt/partial-unification_2.13_1.0/1.1.2/partial-unification-1.1.2.pom[0m
+[0m2021.04.27 23:30:28 INFO  [error] Total time: 1 s, completed Apr 27, 2021, 11:30:28 PM[0m
+[0m2021.04.27 23:30:28 INFO  sbt bloopInstall exit: 1[0m
+[0m2021.04.27 23:30:29 INFO  time: ran 'sbt bloopInstall' in 37s[0m
+[0m2021.04.27 23:30:29 ERROR sbt command failed: /home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals15151343801681214387/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall[0m
+Apr 27, 2021 11:43:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 214
+[0m2021.04.27 23:44:38 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/metals.sbt[0m
+Apr 27, 2021 11:44:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 227
+[0m2021.04.27 23:44:49 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/metals.sbt[0m
+Apr 27, 2021 11:44:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 232
+Apr 27, 2021 11:44:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 237
+Apr 27, 2021 11:45:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "workspace/didChangeWatchedFiles",
+  "params": {
+    "changes": [
+      {
+        "uri": "file:///home/mateusz/Projekty/scala-cats-test/cats-test/plugins.sbt",
+        "type": 3
+      }
+    ]
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: /home/mateusz/Projekty/scala-cats-test/cats-test/plugins.sbt
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:375)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:426)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3272)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1(MetalsLanguageServer.scala:1245)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1$adapted(MetalsLanguageServer.scala:1244)
+	at scala.collection.immutable.Stream.foreach(Stream.scala:533)
+	at scala.meta.internal.metals.MetalsLanguageServer.onChange(MetalsLanguageServer.scala:1244)
+	at scala.meta.internal.metals.MetalsLanguageServer.didChangeWatchedFiles(MetalsLanguageServer.scala:1196)
+	... 16 more
+
+[0m2021.04.27 23:45:08 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/plugins.sbt[0m
+[0m2021.04.27 23:45:08 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/plugins.sbt[0m
+[0m2021.04.27 23:45:10 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/plugins.sbt[0m
+[0m2021.04.27 23:45:11 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals13878528092387198211/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.27 23:45:14 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.27 23:45:20 INFO  [info] loading settings for project cats-test-build-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:45:22 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/project[0m
+[0m2021.04.27 23:45:28 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:45:28 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.27 23:45:34 INFO  [success] Generated .bloop/cats-test-build-build.json[0m
+[0m2021.04.27 23:45:34 INFO  [success] Total time: 6 s, completed Apr 27, 2021, 11:45:35 PM[0m
+[0m2021.04.27 23:45:38 INFO  [info] loading settings for project cats-test-build from metals.sbt,plugins.sbt ...[0m
+[0m2021.04.27 23:45:38 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.27 23:45:49 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.27 23:45:49 INFO  [success] Total time: 12 s, completed Apr 27, 2021, 11:45:50 PM[0m
+[0m2021.04.27 23:45:56 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.04.27 23:45:56 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.27 23:46:10 INFO  skipping build import with status 'Started'[0m
+[0m2021.04.27 23:47:30 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.04.27 23:47:30 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.04.27 23:47:30 INFO  [success] Total time: 93 s (01:33), completed Apr 27, 2021, 11:47:30 PM[0m
+[0m2021.04.27 23:47:30 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.04.27 23:47:30 INFO  time: ran 'sbt bloopInstall' in 2m19s[0m
+[0m2021.04.27 23:47:30 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7357596967303251049/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Apr 27, 2021 11:47:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 265
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+error: Giving up on waiting for a connection, printing embedded bloop logs:
+> No server running at 127.0.0.1:8212, let's fire one...
+> Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+error: Trying a tcp-based connection to the server instead...
+Opening a bsp server connection with 'bsp --protocol tcp --port 42456'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.04.27 23:48:10 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+error: Giving up on waiting for a connection, printing embedded bloop logs:
+> No server running at 127.0.0.1:8212, let's fire one...
+> Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+error: The launcher failed to establish a bsp connection, aborting...
+[0m2021.04.27 23:48:33 ERROR Failed to connect with build server, no functionality will work.
+java.lang.RuntimeException: The server did not start, got FailedToOpenBspConnection
+	at bloop.launcher.LauncherMain.failPromise$1(Launcher.scala:95)
+	at bloop.launcher.LauncherMain.runLauncher(Launcher.scala:122)
+	at scala.meta.internal.metals.BloopServers$$anon$1.run(BloopServers.scala:159)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:832)
+[0m
+[0m2021.04.27 23:48:35 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+Apr 27, 2021 11:51:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 711
+[0m2021.04.27 23:51:30 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+[0m2021.04.27 23:51:35 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+Apr 27, 2021 11:51:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 835
+[0m2021.04.27 23:51:41 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.04.27 23:51:44 INFO  time: code lens generation in 1.19s[0m
+[0m2021.04.27 23:51:48 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Apr 27, 2021 11:52:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1007
+[0m2021.04.27 23:52:46 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+[0m2021.04.27 23:52:46 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+[0m2021.04.27 23:52:46 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+Apr 27, 2021 11:52:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1072
+[0m2021.04.27 23:52:57 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Apr 27, 2021 11:53:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1112
+[0m2021.04.27 23:53:12 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+[0m2021.04.27 23:54:24 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+Apr 27, 2021 11:54:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1236
+Apr 27, 2021 11:54:36 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Apr 27, 2021 11:54:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:417)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:140)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:113)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:102)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:158)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:959)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:807)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:23)
+
+Apr 27, 2021 11:54:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1337
+[0m2021.04.27 23:54:53 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+[0m2021.04.27 23:55:01 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+[0m2021.04.27 23:55:01 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/services/Dupa.scala[0m
+Apr 27, 2021 11:55:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1365
+[0m2021.04.27 23:55:06 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Apr 27, 2021 11:58:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1393
+[0m2021.04.27 23:58:12 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/build.sbt[0m
+[0m2021.04.27 23:58:15 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals3616372292169312773/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.27 23:58:18 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.27 23:58:22 INFO  [info] loading settings for project cats-test-build-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:58:27 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/project[0m
+[0m2021.04.27 23:58:33 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.27 23:58:33 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.27 23:58:44 INFO  [success] Generated .bloop/cats-test-build-build.json[0m
+[0m2021.04.27 23:58:44 INFO  [success] Total time: 11 s, completed Apr 27, 2021, 11:58:45 PM[0m
+[0m2021.04.27 23:58:46 INFO  [info] loading settings for project cats-test-build from metals.sbt,plugins.sbt ...[0m
+[0m2021.04.27 23:58:46 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.27 23:58:49 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.27 23:58:51 INFO  [success] Total time: 5 s, completed Apr 27, 2021, 11:58:51 PM[0m
+[0m2021.04.27 23:58:53 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.04.27 23:58:53 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.27 23:58:56 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.04.27 23:58:56 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.04.27 23:58:56 INFO  [success] Total time: 1 s, completed Apr 27, 2021, 11:58:56 PM[0m
+[0m2021.04.27 23:58:56 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.04.27 23:58:57 INFO  time: ran 'sbt bloopInstall' in 41s[0m
+[0m2021.04.27 23:58:57 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4244928250840874091/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4244928250840874091/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4244928250840874091/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.27 23:58:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+Apr 27, 2021 11:59:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1408
+No more data in the client stdin, exiting...
+[0m2021.04.27 23:59:17 ERROR Timeout waiting for 'build/initialize' response[0m
+[0m2021.04.27 23:59:17 WARN  Retrying connection to the build server Bloop[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher11466907242817794193/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher11466907242817794193/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher11466907242817794193/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.27 23:59:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.27 23:59:17 INFO  Attempting to connect to the build server...[0m
+[0m2021.04.27 23:59:17 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher399683789760115617/bsp.socket'...
+Starting the bsp launcher for bloop...
+Waiting for the bsp connection to come up...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13993605330934666719/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher399683789760115617/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher399683789760115617/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.27 23:59:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13993605330934666719/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13993605330934666719/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.27 23:59:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.27 23:59:20 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+No more data in the client stdin, exiting...
+[0m2021.04.27 23:59:37 ERROR Timeout waiting for 'build/initialize' response[0m
+[0m2021.04.27 23:59:37 WARN  Retrying connection to the build server Bloop[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13208014703743405821/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the client stdin, exiting...
+[0m2021.04.27 23:59:37 ERROR Timeout waiting for 'build/initialize' response[0m
+[0m2021.04.27 23:59:37 WARN  Retrying connection to the build server Bloop[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher844850758435113008/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13208014703743405821/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13208014703743405821/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.27 23:59:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher844850758435113008/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher844850758435113008/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.27 23:59:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.27 23:59:53 INFO  time: Connected to build server in 56s[0m
+[0m2021.04.27 23:59:53 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.04.27 23:59:54 INFO  time: Imported build in 0.21s[0m
+[0m2021.04.28 00:00:00 INFO  time: indexed workspace in 6.59s[0m
+[0m2021.04.28 00:00:30 INFO  compiling root (2 scala sources)[0m
+Apr 28, 2021 12:00:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1563
+Apr 28, 2021 12:00:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1564
+Apr 28, 2021 12:00:58 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1565
+[0m2021.04.28 00:01:02 INFO  compiling root-test (1 scala source)[0m
+[0m2021.04.28 00:01:03 INFO  time: compiled root in 33s[0m
+[0m2021.04.28 00:01:06 INFO  time: compiled root-test in 4.45s[0m
+Apr 28, 2021 12:02:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1652
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 119, 119, 135)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 119, 119, 128)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 119, 119, 129)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[Int]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 119, 119, 130)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[Int]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 119, 119, 130)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[Int]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 119, 119, 130)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 137, 137, 153)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 137, 137, 146)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Monoid[Int]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 137, 137, 148)
+[0m2021.04.28 00:04:05 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 00:04:07 INFO  time: compiled root in 2s[0m
+[0m2021.04.28 00:04:13 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 00:04:16 INFO  time: compiled root in 2.89s[0m
+[0m2021.04.28 00:05:07 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 00:05:09 INFO  time: compiled root in 2.04s[0m
+[0m2021.04.28 00:08:11 INFO  shutting down Metals[0m
+[0m2021.04.28 00:08:11 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 00:08:11 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 00:08:11 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.04.28 22:06:35 INFO  Started: Metals version 0.10.2 in workspace '/home/mateusz/Projekty/scala-cats-test/cats-test' for client vscode 1.55.2.[0m
+[0m2021.04.28 22:06:47 INFO  time: initialize in 11s[0m
+[0m2021.04.28 22:06:49 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+[0m2021.04.28 22:06:49 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher6626274103062191312/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.04.28 22:06:51 INFO  skipping build import with status 'Installed'[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.13.4.
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.16.0/jline-3.16.0.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.4/scala-compiler-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.4/scala-reflect-2.13.4.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'root', 'root-test'
+[0m[32m[D][0m Loading previous analysis for 'root-test' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/test/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Loading previous analysis for 'root' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher6626274103062191312/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher6626274103062191312/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:07:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:07:06 INFO  Attempting to connect to the build server...[0m
+[0m2021.04.28 22:07:06 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher595439522281319012/bsp.socket'...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher16477611667639249644/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher595439522281319012/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher595439522281319012/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:07:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher16477611667639249644/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher16477611667639249644/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:07:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:07:07 INFO  time: Connected to build server in 17s[0m
+[0m2021.04.28 22:07:07 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.04.28 22:07:09 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.28 22:07:09 INFO  time: Imported build in 0.31s[0m
+[0m2021.04.28 22:07:19 INFO  time: indexed workspace in 9.35s[0m
+[0m2021.04.28 22:07:21 INFO  compiling root (2 scala sources)[0m
+[0m2021.04.28 22:07:22 INFO  time: code lens generation in 30s[0m
+[0m2021.04.28 22:07:31 INFO  compiling root-test (1 scala source)[0m
+[0m2021.04.28 22:07:31 INFO  time: compiled root in 10s[0m
+[0m2021.04.28 22:07:34 INFO  time: compiled root-test in 3.49s[0m
+[0m2021.04.28 22:09:38 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals11679704190031035010/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.28 22:09:40 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals15567660698790627107/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.28 22:09:44 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.28 22:09:47 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.28 22:09:48 INFO  [info] loading settings for project cats-test-build-build-build from metals.sbt ...[0m
+[0m2021.04.28 22:09:50 INFO  [info] loading settings for project cats-test-build-build-build from metals.sbt ...[0m
+[0m2021.04.28 22:09:51 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/project[0m
+[0m2021.04.28 22:09:53 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/project[0m
+[0m2021.04.28 22:09:55 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.28 22:09:56 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.28 22:09:58 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.28 22:09:58 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.28 22:10:00 ERROR [info] waiting for lock on /home/mateusz/.ivy2/exclude_classifiers.lock to be available...[0m
+[0m2021.04.28 22:10:03 INFO  [success] Generated .bloop/cats-test-build-build.json[0m
+[0m2021.04.28 22:10:03 INFO  [success] Total time: 6 s, completed Apr 28, 2021, 10:10:03 PM[0m
+[0m2021.04.28 22:10:04 INFO  [info] loading settings for project cats-test-build from metals.sbt,plugins.sbt ...[0m
+[0m2021.04.28 22:10:04 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.28 22:10:04 ERROR [info] waiting for lock on /home/mateusz/.ivy2/exclude_classifiers.lock to be available...[0m
+[0m2021.04.28 22:10:08 INFO  [success] Generated .bloop/cats-test-build-build.json[0m
+[0m2021.04.28 22:10:08 INFO  [success] Total time: 9 s, completed Apr 28, 2021, 10:10:08 PM[0m
+[0m2021.04.28 22:10:09 INFO  [info] loading settings for project cats-test-build from metals.sbt,plugins.sbt ...[0m
+[0m2021.04.28 22:10:09 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.28 22:10:09 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.28 22:10:11 INFO  [success] Total time: 6 s, completed Apr 28, 2021, 10:10:11 PM[0m
+[0m2021.04.28 22:10:12 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.04.28 22:10:12 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.28 22:10:12 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.28 22:10:13 INFO  [success] Total time: 4 s, completed Apr 28, 2021, 10:10:13 PM[0m
+[0m2021.04.28 22:10:14 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.04.28 22:10:14 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.04.28 22:10:14 INFO  [success] Total time: 1 s, completed Apr 28, 2021, 10:10:14 PM[0m
+[0m2021.04.28 22:10:14 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.04.28 22:10:14 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.04.28 22:10:15 INFO  time: ran 'sbt bloopInstall' in 36s[0m
+[0m2021.04.28 22:10:15 INFO  Disconnecting from Bloop session...[0m
+[0m2021.04.28 22:10:14 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.28 22:10:15 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 22:10:15 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.04.28 22:10:15 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.04.28 22:10:15 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher383368821198579247/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher383368821198579247/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher383368821198579247/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:10:15 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:10:15 INFO  Attempting to connect to the build server...[0m
+[0m2021.04.28 22:10:15 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher17229283668412411732/bsp.socket'...
+Waiting for the bsp connection to come up...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13689280829489382769/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher17229283668412411732/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher17229283668412411732/bsp.socket...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13689280829489382769/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13689280829489382769/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+Starting thread that pumps stdin and redirects it to the bsp server...
+[0m2021.04.28 22:10:15 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:10:15 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:10:15 INFO  time: Connected to build server in 0.5s[0m
+[0m2021.04.28 22:10:15 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.04.28 22:10:15 INFO  time: Imported build in 0.24s[0m
+[0m2021.04.28 22:10:17 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.04.28 22:10:17 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.04.28 22:10:17 INFO  [success] Total time: 1 s, completed Apr 28, 2021, 10:10:17 PM[0m
+[0m2021.04.28 22:10:17 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.04.28 22:10:17 INFO  time: ran 'sbt bloopInstall' in 37s[0m
+[0m2021.04.28 22:10:17 INFO  Disconnecting from Bloop session...[0m
+[0m2021.04.28 22:10:17 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 22:10:17 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.04.28 22:10:17 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 22:10:17 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher12782488911733309852/bsp.socket'...
+No more data in the server stdin, exiting...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher12782488911733309852/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher12782488911733309852/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:10:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:10:17 INFO  Attempting to connect to the build server...[0m
+[0m2021.04.28 22:10:17 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher12235156565372217515/bsp.socket'...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13835184023707427243/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher12235156565372217515/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher12235156565372217515/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13835184023707427243/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13835184023707427243/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:10:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:10:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:10:17 INFO  time: Connected to build server in 0.29s[0m
+[0m2021.04.28 22:10:17 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.04.28 22:10:20 INFO  time: indexed workspace in 4.08s[0m
+[0m2021.04.28 22:10:22 INFO  time: indexed workspace in 4.12s[0m
+[0m2021.04.28 22:19:37 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals12112349421401283372/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+[0m2021.04.28 22:19:41 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.04.28 22:19:43 INFO  [info] loading settings for project cats-test-build-build-build from metals.sbt ...[0m
+[0m2021.04.28 22:19:45 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/project[0m
+[0m2021.04.28 22:19:47 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.04.28 22:19:47 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.04.28 22:19:53 INFO  [success] Generated .bloop/cats-test-build-build.json[0m
+[0m2021.04.28 22:19:53 INFO  [success] Total time: 6 s, completed Apr 28, 2021, 10:19:54 PM[0m
+[0m2021.04.28 22:19:53 INFO  [info] loading settings for project cats-test-build from metals.sbt,plugins.sbt ...[0m
+[0m2021.04.28 22:19:55 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.04.28 22:19:56 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.04.28 22:19:56 INFO  [success] Total time: 2 s, completed Apr 28, 2021, 10:19:57 PM[0m
+[0m2021.04.28 22:19:57 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.04.28 22:19:57 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.04.28 22:19:59 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.04.28 22:19:59 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.04.28 22:19:59 INFO  [success] Total time: 1 s, completed Apr 28, 2021, 10:19:59 PM[0m
+[0m2021.04.28 22:19:59 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.04.28 22:19:59 INFO  time: ran 'sbt bloopInstall' in 22s[0m
+[0m2021.04.28 22:19:59 INFO  Disconnecting from Bloop session...[0m
+[0m2021.04.28 22:19:59 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 22:19:59 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.04.28 22:19:59 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 22:19:59 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher14680568560638675373/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher14680568560638675373/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher14680568560638675373/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:19:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:20:00 INFO  Attempting to connect to the build server...[0m
+[0m2021.04.28 22:20:00 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher489115873271270435/bsp.socket'...
+Waiting for the bsp connection to come up...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13051197384419077193/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher489115873271270435/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher489115873271270435/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:20:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13051197384419077193/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13051197384419077193/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 22:19:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 22:20:00 INFO  time: Connected to build server in 0.23s[0m
+[0m2021.04.28 22:20:00 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.04.28 22:20:00 INFO  time: Imported build in 0.18s[0m
+[0m2021.04.28 22:20:02 INFO  time: indexed workspace in 2.33s[0m
+[0m2021.04.28 22:21:38 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:21:38 INFO  time: compiled root in 0.64s[0m
+[0m2021.04.28 22:22:10 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:22:10 INFO  time: compiled root in 0.41s[0m
+[0m2021.04.28 22:22:54 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:22:54 INFO  time: compiled root in 0.6s[0m
+Apr 28, 2021 10:23:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1261
+[0m2021.04.28 22:23:18 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:23:18 INFO  time: compiled root in 0.57s[0m
+[0m2021.04.28 22:23:45 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:23:45 INFO  time: compiled root in 0.66s[0m
+[0m2021.04.28 22:24:05 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:24:06 INFO  time: compiled root in 1.57s[0m
+[0m2021.04.28 22:24:43 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:24:45 INFO  time: compiled root in 1.67s[0m
+Apr 28, 2021 10:24:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+[0m2021.04.28 22:25:03 INFO  compiling cats-test-build (1 scala source)[0m
+[0m2021.04.28 22:25:50 INFO  time: compiled cats-test-build in 46s[0m
+Apr 28, 2021 10:25:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ClassNotFoundException: 
+java.util.concurrent.CompletionException: java.lang.ClassNotFoundException: 
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2152)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:42)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.ClassNotFoundException: 
+	at scala.meta.internal.metals.debug.BuildTargetClassesFinder.$anonfun$findClassAndBuildTarget$1(BuildTargetClassesFinder.scala:107)
+	at scala.Option.fold(Option.scala:251)
+	at scala.meta.internal.metals.debug.BuildTargetClassesFinder.findClassAndBuildTarget(BuildTargetClassesFinder.scala:108)
+	at scala.meta.internal.metals.debug.BuildTargetClassesFinder.findMainClassAndItsBuildTarget(BuildTargetClassesFinder.scala:36)
+	at scala.meta.internal.metals.debug.DebugProvider.$anonfun$resolveMainClassParams$1(DebugProvider.scala:325)
+	at scala.meta.internal.metals.debug.DebugProvider$$anonfun$withRebuildRetry$1.$anonfun$applyOrElse$5(DebugProvider.scala:548)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	... 4 more
+
+[0m2021.04.28 22:32:41 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:32:41 INFO  time: compiled root in 0.72s[0m
+Apr 28, 2021 10:34:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1698
+[0m2021.04.28 22:34:50 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:34:50 INFO  time: compiled root in 0.88s[0m
+[0m2021.04.28 22:35:31 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:35:34 INFO  time: compiled root in 2.79s[0m
+[0m2021.04.28 22:36:20 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:36:22 INFO  time: compiled root in 1.91s[0m
+Apr 28, 2021 10:36:46 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+[0m2021.04.28 22:37:30 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:37:33 INFO  time: compiled root in 3.35s[0m
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 377)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 370)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 371)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 372)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 373)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[String]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 375)
+Apr 28, 2021 10:38:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1991
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[String]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 375)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in List[String]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 363, 363, 375)
+[0m2021.04.28 22:38:16 INFO  compiling root-test (1 scala source)[0m
+[0m2021.04.28 22:38:16 INFO  time: compiled root-test in 0.35s[0m
+[0m2021.04.28 22:38:22 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:38:24 INFO  time: compiled root in 1.79s[0m
+[0m2021.04.28 22:38:32 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:38:35 INFO  time: compiled root in 2.81s[0m
+[0m2021.04.28 22:40:48 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:40:49 INFO  time: compiled root in 1.17s[0m
+[0m2021.04.28 22:42:03 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 22:42:04 INFO  time: compiled root in 1.24s[0m
+[0m2021.04.28 22:43:23 INFO  shutting down Metals[0m
+[0m2021.04.28 22:43:24 INFO  Shut down connection with build server.[0m
+[0m2021.04.28 22:43:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.04.28 22:43:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.04.28 23:01:05 INFO  Started: Metals version 0.10.2 in workspace '/home/mateusz/Projekty/scala-cats-test/cats-test' for client vscode 1.55.2.[0m
+[0m2021.04.28 23:01:08 INFO  time: initialize in 2.64s[0m
+[0m2021.04.28 23:01:09 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher4995043270998920815/bsp.socket'...
+[0m2021.04.28 23:01:08 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+Waiting for the bsp connection to come up...
+[0m2021.04.28 23:01:10 INFO  skipping build import with status 'Installed'[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.13.4.
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.16.0/jline-3.16.0.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.4/scala-compiler-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.4/scala-reflect-2.13.4.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'root', 'root-test'
+[0m[32m[D][0m Loading previous analysis for 'root-test' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/test/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Loading previous analysis for 'root' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher4995043270998920815/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher4995043270998920815/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 23:01:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 23:01:18 INFO  Attempting to connect to the build server...[0m
+[0m2021.04.28 23:01:18 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13322172986045849157/bsp.socket'...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher17669510451625584424/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher17669510451625584424/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher17669510451625584424/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 23:01:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13322172986045849157/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13322172986045849157/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.04.28 23:01:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.04.28 23:01:19 INFO  time: Connected to build server in 9.57s[0m
+[0m2021.04.28 23:01:19 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.04.28 23:01:21 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.28 23:01:21 INFO  time: Imported build in 0.28s[0m
+[0m2021.04.28 23:01:27 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.28 23:01:27 INFO  time: code lens generation in 17s[0m
+[0m2021.04.28 23:01:28 INFO  time: indexed workspace in 7.16s[0m
+[0m2021.04.28 23:01:31 INFO  compiling root-test (1 scala source)[0m
+[0m2021.04.28 23:01:37 INFO  time: compiled root-test in 5.91s[0m
+Apr 28, 2021 11:38:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 49
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Comonad[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 369, 369, 386)
+Apr 28, 2021 11:39:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 227
+Apr 28, 2021 11:39:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 273
+Apr 28, 2021 11:40:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 287
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in cats.Comonad[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 579, 579, 596)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 601)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 594)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 599)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 598)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 601)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 594)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in <error>RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 587, 587, 599)
+something's wrong: no file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala in scala.concurrent.Future[<error>]RangePosition(file:///home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala, 592, 592, 608)
+[0m2021.04.28 23:43:16 INFO  compiling root (1 scala source)[0m
+[0m2021.04.28 23:43:18 INFO  shutting down Metals[0m
+[0m2021.04.28 23:43:18 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 23:43:18 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.04.28 23:43:18 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.05.02 14:22:54 INFO  Started: Metals version 0.10.2 in workspace '/home/mateusz/Projekty/scala-cats-test/cats-test' for client vscode 1.55.2.[0m
+[0m2021.05.02 14:23:03 INFO  time: initialize in 8.18s[0m
+[0m2021.05.02 14:23:05 INFO  Attempting to connect to the build server...[0m
+[0m2021.05.02 14:23:05 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/project/metals.sbt[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher6452260385472408842/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.05.02 14:23:08 INFO  skipping build import with status 'Installed'[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.13.4.
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.16.0/jline-3.16.0.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.4/scala-compiler-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.4/scala-reflect-2.13.4.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'root', 'root-test'
+[0m[32m[D][0m Loading previous analysis for 'root-test' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/test/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Loading previous analysis for 'root' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher6452260385472408842/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher6452260385472408842/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 14:23:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 14:23:25 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+[0m2021.05.02 14:23:25 INFO  Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher9823788310461834196/bsp.socket'...
+Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher10594937511431330129/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher9823788310461834196/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher9823788310461834196/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 14:23:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher10594937511431330129/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher10594937511431330129/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 14:23:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 14:23:25 INFO  time: Connected to build server in 20s[0m
+[0m2021.05.02 14:23:25 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.05.02 14:23:27 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.05.02 14:23:28 INFO  time: Imported build in 0.58s[0m
+[0m2021.05.02 14:23:35 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.05.02 14:23:37 INFO  time: code lens generation in 29s[0m
+[0m2021.05.02 14:23:38 INFO  time: indexed workspace in 10s[0m
+May 02, 2021 2:26:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+[0m2021.05.02 14:26:03 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 14:26:14 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 14:26:21 INFO  time: compiled root in 6.95s[0m
+[0m2021.05.02 14:28:12 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 14:28:13 INFO  time: compiled root in 1.09s[0m
+[0m2021.05.02 14:28:34 INFO  time: code lens generation in 1.15s[0m
+[0m2021.05.02 14:28:34 INFO  time: code lens generation in 1.9s[0m
+May 02, 2021 2:28:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 105
+[0m2021.05.02 14:28:48 INFO  running '/home/mateusz/jdk-assets/jdk-14/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals4496669960475434673/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+May 02, 2021 2:28:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 128
+[0m2021.05.02 14:28:52 INFO  [info] welcome to sbt 1.5.0 (Oracle Corporation Java 14)[0m
+[0m2021.05.02 14:28:55 INFO  [info] loading settings for project cats-test-build-build-build from metals.sbt ...[0m
+[0m2021.05.02 14:28:57 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project/project[0m
+[0m2021.05.02 14:29:00 INFO  [info] loading settings for project cats-test-build-build from metals.sbt ...[0m
+[0m2021.05.02 14:29:00 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project/project[0m
+[0m2021.05.02 14:29:06 INFO  [success] Generated .bloop/cats-test-build-build.json[0m
+[0m2021.05.02 14:29:06 INFO  [success] Total time: 5 s, completed May 2, 2021, 2:29:06 PM[0m
+[0m2021.05.02 14:29:06 INFO  [info] loading settings for project cats-test-build from metals.sbt,plugins.sbt ...[0m
+[0m2021.05.02 14:29:06 INFO  [info] loading project definition from /home/mateusz/Projekty/scala-cats-test/cats-test/project[0m
+[0m2021.05.02 14:29:09 INFO  [success] Generated .bloop/cats-test-build.json[0m
+[0m2021.05.02 14:29:09 INFO  [success] Total time: 2 s, completed May 2, 2021, 2:29:09 PM[0m
+[0m2021.05.02 14:29:14 INFO  [info] loading settings for project root from build.sbt ...[0m
+[0m2021.05.02 14:29:14 INFO  [info] set current project to cats-test (in build file:/home/mateusz/Projekty/scala-cats-test/cats-test/)[0m
+[0m2021.05.02 14:29:24 INFO  [success] Generated .bloop/root.json[0m
+[0m2021.05.02 14:29:24 INFO  [success] Generated .bloop/root-test.json[0m
+[0m2021.05.02 14:29:24 INFO  [success] Total time: 9 s, completed May 2, 2021, 2:29:24 PM[0m
+[0m2021.05.02 14:29:24 INFO  sbt bloopInstall exit: 0[0m
+[0m2021.05.02 14:29:24 INFO  time: ran 'sbt bloopInstall' in 36s[0m
+[0m2021.05.02 14:29:24 INFO  Disconnecting from Bloop session...[0m
+[0m2021.05.02 14:29:24 INFO  Shut down connection with build server.[0m
+[0m2021.05.02 14:29:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+[0m2021.05.02 14:29:24 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.05.02 14:29:24 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher13685974718780902978/bsp.socket'...
+Waiting for the bsp connection to come up...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Configured SemanticDB in projects 'root-test', 'root'
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher13685974718780902978/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher13685974718780902978/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 14:29:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 14:29:25 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher17501486390004558447/bsp.socket'...
+[0m2021.05.02 14:29:25 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher10846803722480511430/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher17501486390004558447/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher17501486390004558447/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 14:29:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher10846803722480511430/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher10846803722480511430/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 14:29:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 14:29:24 INFO  time: Connected to build server in 0.82s[0m
+[0m2021.05.02 14:29:24 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.05.02 14:29:26 INFO  time: Imported build in 0.5s[0m
+[0m2021.05.02 14:29:33 INFO  time: indexed workspace in 7.43s[0m
+[0m2021.05.02 14:29:36 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 14:29:38 INFO  time: compiled root in 2.77s[0m
+[0m2021.05.02 14:32:35 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 14:32:35 INFO  time: compiled root in 0.69s[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.05.02 16:05:25 INFO  Started: Metals version 0.10.2 in workspace '/home/mateusz/Projekty/scala-cats-test/cats-test' for client vscode 1.55.2.[0m
+[0m2021.05.02 16:05:33 INFO  time: initialize in 8.5s[0m
+[0m2021.05.02 16:05:36 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher6667627961952547505/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.05.02 16:05:36 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.05.02 16:05:37 INFO  skipping build import with status 'Installed'[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.13.4.
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.16.0/jline-3.16.0.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.4/scala-compiler-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.4/scala-reflect-2.13.4.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'root-test', 'root'
+[0m[32m[D][0m Loading previous analysis for 'root-test' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/test/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Loading previous analysis for 'root' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher6667627961952547505/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher6667627961952547505/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 16:06:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 16:06:07 INFO  Attempting to connect to the build server...[0m
+[0m2021.05.02 16:06:07 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher5023984752307083498/bsp.socket'...
+Waiting for the bsp connection to come up...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher554154095368561774/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher554154095368561774/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher554154095368561774/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 16:06:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher5023984752307083498/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher5023984752307083498/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 16:06:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 16:06:08 INFO  time: Connected to build server in 32s[0m
+[0m2021.05.02 16:06:08 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.05.02 16:06:14 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.05.02 16:06:15 INFO  time: Imported build in 0.92s[0m
+[0m2021.05.02 16:06:29 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.05.02 16:06:29 INFO  time: code lens generation in 53s[0m
+[0m2021.05.02 16:06:31 INFO  time: indexed workspace in 15s[0m
+[0m2021.05.02 16:15:16 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:15:18 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:15:20 INFO  time: compiled root in 2.23s[0m
+May 02, 2021 4:34:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 58
+May 02, 2021 4:34:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 61
+[0m2021.05.02 16:34:27 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:34:33 INFO  time: compiled root in 5.44s[0m
+May 02, 2021 4:34:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2152)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:59)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:200)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:80)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.05.02 16:35:24 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:35:24 INFO  time: compiled root in 0.94s[0m
+[0m2021.05.02 16:35:53 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:35:53 INFO  time: compiled root in 0.72s[0m
+[0m2021.05.02 16:36:22 INFO  /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala:21:23: stale bloop error: value seconds is not a member of Int
+  Await.result(unitF, 5 seconds)
+                      ^^^^^^^^^[0m
+[0m2021.05.02 16:36:22 INFO  /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala:21:23: stale bloop error: value seconds is not a member of Int
+  Await.result(unitF, 5 seconds)
+                      ^^^^^^^^^[0m
+[0m2021.05.02 16:36:26 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:36:26 INFO  time: compiled root in 0.88s[0m
+[0m2021.05.02 16:36:41 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:36:41 INFO  time: compiled root in 0.47s[0m
+[0m2021.05.02 16:37:07 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:37:07 INFO  time: compiled root in 0.48s[0m
+[0m2021.05.02 16:37:13 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:37:13 INFO  time: compiled root in 0.42s[0m
+May 02, 2021 4:37:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 550
+[0m2021.05.02 16:37:38 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:37:38 INFO  time: compiled root in 0.44s[0m
+May 02, 2021 4:38:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 615
+[0m2021.05.02 16:39:05 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:39:05 INFO  time: compiled root in 0.42s[0m
+[0m2021.05.02 16:39:14 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:39:14 INFO  time: compiled root in 0.38s[0m
+[0m2021.05.02 16:39:21 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:39:23 INFO  time: compiled root in 2.12s[0m
+[0m2021.05.02 16:42:22 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:42:23 INFO  time: compiled root in 1.46s[0m
+[0m2021.05.02 16:42:43 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:42:43 INFO  time: compiled root in 0.42s[0m
+[0m2021.05.02 16:42:48 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:42:49 INFO  time: compiled root in 1.72s[0m
+May 02, 2021 4:43:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 872
+May 02, 2021 4:43:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 874
+May 02, 2021 4:43:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 871
+[0m2021.05.02 16:43:23 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:43:25 INFO  time: compiled root in 1.72s[0m
+[0m2021.05.02 16:43:54 INFO  compiling root (1 scala source)[0m
+[0m2021.05.02 16:43:55 INFO  time: compiled root in 1.28s[0m
+[0m2021.05.02 20:14:55 INFO  Started: Metals version 0.10.2 in workspace '/home/mateusz/Projekty/scala-cats-test/cats-test' for client vscode 1.55.2.[0m
+[0m2021.05.02 20:14:59 INFO  time: initialize in 4.42s[0m
+[0m2021.05.02 20:15:04 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher9237062724427606997/bsp.socket'...
+Waiting for the bsp connection to come up...
+[0m2021.05.02 20:15:05 INFO  skipping build import with status 'Installed'[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop'...
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root.json'
+[0m[32m[D][0m Loading project from '/home/mateusz/Projekty/scala-cats-test/cats-test/.bloop/root-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.13.4.
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.16.0/jline-3.16.0.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.4/scala-compiler-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar
+[0m[32m[D][0m   => /home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.4/scala-reflect-2.13.4.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'root', 'root-test'
+[0m[32m[D][0m Loading previous analysis for 'root' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/compile/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Loading previous analysis for 'root-test' from '/home/mateusz/Projekty/scala-cats-test/cats-test/target/streams/test/bloopAnalysisOut/_global/streams/inc_compile_2.13.zip'.
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher9237062724427606997/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher9237062724427606997/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 20:15:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 20:15:12 WARN  no build target for: /home/mateusz/Projekty/scala-cats-test/cats-test/src/main/scala/example/Hello.scala[0m
+[0m2021.05.02 20:15:14 INFO  Attempting to connect to the build server...[0m
+[0m2021.05.02 20:15:14 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher10043677369286658618/bsp.socket'...
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol local --socket /tmp/bsp-launcher7942486572745425185/bsp.socket'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher10043677369286658618/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher10043677369286658618/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at local:///tmp/bsp-launcher7942486572745425185/bsp.socket...
+The server is listening for incoming connections at local:///tmp/bsp-launcher7942486572745425185/bsp.socket...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 20:15:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.05.02 20:15:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/mateusz/.cache/metals/bsp.trace.json[0m
+[0m2021.05.02 20:15:14 INFO  time: Connected to build server in 10s[0m
+[0m2021.05.02 20:15:14 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.05.02 20:15:23 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.05.02 20:15:23 INFO  time: Imported build in 0.42s[0m
+[0m2021.05.02 20:15:35 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.05.02 20:15:37 INFO  time: code lens generation in 24s[0m
+[0m2021.05.02 20:15:39 INFO  time: indexed workspace in 16s[0m
+[0m2021.05.02 20:32:44 INFO  compiling root-test (1 scala source)[0m
+[0m2021.05.02 20:32:53 INFO  time: compiled root-test in 8.99s[0m
