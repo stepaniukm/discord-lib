@@ -21,9 +21,10 @@
             "/home/mateusz/.sbt/boot/scala-2.12.13/lib/scala-library.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.4.8-19-4d9f966b/sbt-bloop-1.4.8-19-4d9f966b.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.lyranthe.sbt/partial-unification/scala_2.12/sbt_1.0/1.1.2/jars/partial-unification.jar",
+            "/home/mateusz/.cache/coursier/v1/https/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/au.com.onegeek/sbt-dotenv/scala_2.12/sbt_1.0/2.1.204/jars/sbt-dotenv.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main_2.12/1.5.0/main_2.12-1.5.0.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.5.0/io_2.12-1.5.0.jar",
-            "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar",
+            "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.6.0/jna-5.6.0.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.7/gson-2.7.jar",
             "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
@@ -149,8 +150,8 @@
                 "import _root_.sbt._",
                 "import _root_.sbt.Keys._",
                 "import _root_.sbt.nio.Keys._",
-                "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._, _root_.org.lyranthe.sbt.PartialUnification.autoImport._",
-                "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin, _root_.org.lyranthe.sbt.PartialUnification"
+                "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._, _root_.org.lyranthe.sbt.PartialUnification.autoImport._, _root_.au.com.onegeek.sbtdotenv.SbtDotenv.autoImport._",
+                "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin, _root_.org.lyranthe.sbt.PartialUnification, _root_.au.com.onegeek.sbtdotenv.SbtDotenv"
             ]
         },
         "test": {
@@ -250,6 +251,30 @@
                     ]
                 },
                 {
+                    "organization": "au.com.onegeek",
+                    "name": "sbt-dotenv",
+                    "version": "2.1.204",
+                    "configurations": "compile",
+                    "artifacts": [
+                        {
+                            "name": "sbt-dotenv",
+                            "path": "/home/mateusz/.cache/coursier/v1/https/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/au.com.onegeek/sbt-dotenv/scala_2.12/sbt_1.0/2.1.204/jars/sbt-dotenv.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.java.dev.jna",
+                    "name": "jna",
+                    "version": "5.6.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jna",
+                            "path": "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.6.0/jna-5.6.0.jar"
+                        }
+                    ]
+                },
+                {
                     "organization": "com.google.code.gson",
                     "name": "gson",
                     "version": "2.7",
@@ -338,23 +363,6 @@
                             "name": "io_2.12",
                             "classifier": "sources",
                             "path": "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.5.0/io_2.12-1.5.0-sources.jar"
-                        }
-                    ]
-                },
-                {
-                    "organization": "net.java.dev.jna",
-                    "name": "jna",
-                    "version": "5.5.0",
-                    "configurations": "default",
-                    "artifacts": [
-                        {
-                            "name": "jna",
-                            "path": "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar"
-                        },
-                        {
-                            "name": "jna",
-                            "classifier": "sources",
-                            "path": "/home/mateusz/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.5.0/jna-5.5.0-sources.jar"
                         }
                     ]
                 },
