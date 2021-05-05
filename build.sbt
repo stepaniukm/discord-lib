@@ -18,7 +18,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
   "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
   "org.typelevel" %% "cats-core" % "2.3.0",
-  "org.typelevel" %% "cats-effect" % "3.1.0"
+  "org.typelevel" %% "cats-effect" % "3.1.0",
+  "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion,
+  "net.liftweb" %% "lift-json" % "3.4.3"
 )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

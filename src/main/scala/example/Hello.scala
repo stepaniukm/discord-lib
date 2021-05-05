@@ -17,11 +17,29 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.Await
 import akka.http.scaladsl.model.headers.RawHeader
-import akka.http.scaladsl.unmarshalling.Unmarshaller
+import akka.http.scaladsl.unmarshalling.Unmarshal
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import spray.json.DefaultJsonProtocol._
+import spray.json.DefaultJsonProtocol
+import akka.stream.scaladsl.Flow
+import net.liftweb.json._
+
+case class Channel(
+  id: String, 
+  last_message_id: String, 
+  name: String,
+  position: String,
+  parent_id: String,
+  topic: String,
+  guild_id: String,
+  nsfw: Boolean,
+  rate_limit_per_user: Int
+);
 
 object Example extends App {
   implicit val system = ActorSystem("http-client")
   implicit val materializer = ActorMaterializer()
+  implicit val formats = DefaultFormats
 
   val token = env.get("TOKEN");
 
@@ -42,7 +60,9 @@ object Example extends App {
 
       val result = Await.result(c, 10.seconds);
 
-      println(result);
+      val extractedChannel = parse(result).extract[Channel];
+
+      println(extractedChannel.id);
 
     }
     case None => {
