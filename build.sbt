@@ -10,7 +10,15 @@ lazy val root = (project in file("."))
     name := "cats-test",
     libraryDependencies += scalaTest % Test
   )
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.3.0"
-libraryDependencies += "org.typelevel" %% "cats-effect" % "3.1.0"
+
+val AkkaVersion = "2.6.8"
+val AkkaHttpVersion = "10.2.4"
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+  "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+  "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
+  "org.typelevel" %% "cats-core" % "2.3.0",
+  "org.typelevel" %% "cats-effect" % "3.1.0"
+)
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
