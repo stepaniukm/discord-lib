@@ -28,6 +28,7 @@ import akka.http.scaladsl.model.HttpEntity
 
 case class Channel(
   id: String,
+  `type`: Int,
   guild_id: String,
   position: Option[Int],
   name: Option[String],
@@ -49,7 +50,7 @@ case class Channel(
 );
 
 object MyJsonProtocol extends DefaultJsonProtocol {
-  implicit val channelFormat = jsonFormat19(Channel);
+  implicit val channelFormat = jsonFormat20(Channel);
 }
 
 object Example extends App {
@@ -77,7 +78,7 @@ object Example extends App {
 
       val result = Await.result(c, 10.seconds);
 
-      println(result.id);
+      println(result.`type`);
 
     }
     case None => {
