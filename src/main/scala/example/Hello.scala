@@ -25,15 +25,15 @@ import akka.stream.scaladsl.Flow
 import net.liftweb.json._
 
 case class Channel(
-  id: String, 
-  last_message_id: String, 
-  name: String,
-  position: String,
-  parent_id: String,
-  topic: String,
-  guild_id: String,
-  nsfw: Boolean,
-  rate_limit_per_user: Int
+    id: String,
+    last_message_id: String,
+    name: String,
+    position: String,
+    parent_id: String,
+    topic: String,
+    guild_id: String,
+    nsfw: Boolean,
+    rate_limit_per_user: Int
 );
 
 object Example extends App {
@@ -48,7 +48,7 @@ object Example extends App {
       val authHeader = RawHeader("Authorization", f"Bot $value");
 
       val request = HttpRequest(
-        method = HttpMethods.GET, 
+        method = HttpMethods.GET,
         uri = "https://discord.com/api/v9/channels/839587771483553855",
         headers = Seq(authHeader)
       );
@@ -69,8 +69,6 @@ object Example extends App {
       println("You didn't provide a token");
     }
   }
-
-
 
   Http().shutdownAllConnectionPools().foreach(_ => system.terminate);
 }
