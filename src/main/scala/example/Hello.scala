@@ -43,6 +43,10 @@ object Example extends App {
 
   val token = env.get("TOKEN");
 
+  new WebsocketClient(
+    WebsocketClientConfig("wss://gateway.discord.gg/?v=8&encoding=json")
+  ).run();
+
   token match {
     case Some(value) => {
       val authHeader = RawHeader("Authorization", f"Bot $value");
