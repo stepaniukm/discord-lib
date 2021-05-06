@@ -9,8 +9,13 @@ import akka.http.scaladsl.model.ws._
 
 import scala.concurrent.Future
 
+package object WebsocketClientTypes {
+  type WebsocketMessageSink = Sink[Message, Future[Done]];
+}
+
 case class WebsocketClientConfig(
   socketUrl: String,
+  sink: WebsocketClientTypes.WebsocketMessageSink,
 );
 
 class WebsocketClient(config: WebsocketClientConfig) {
@@ -18,22 +23,13 @@ class WebsocketClient(config: WebsocketClientConfig) {
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
 
-    // print each incoming strict text message
-    val printSink: Sink[Message, Future[Done]] =
-      Sink.foreach {
-        case message: TextMessage.Strict =>
-          println(message.text)
-        case _ =>
-        // ignore other message types
-      }
-
     val helloSource: Source[Message, NotUsed] =
       Source.single(TextMessage("hello world!"))
 
     // the Future[Done] is the materialized value of Sink.foreach
     // and it is completed when the stream completes
     val flow: Flow[Message, Message, Future[Done]] =
-    Flow.fromSinkAndSourceMat(printSink, helloSource)(Keep.left)
+    Flow.fromSinkAndSourceMat(config.sink, helloSource)(Keep.left)
 
     // upgradeResponse is a Future[WebSocketUpgradeResponse] that
     // completes or fails when the connection succeeds or fails
