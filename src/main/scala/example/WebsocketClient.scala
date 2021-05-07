@@ -14,6 +14,8 @@ import scala.concurrent.{Future, Promise}
 import scala.concurrent.duration._
 import spray.json.DefaultJsonProtocol._
 
+import scala.util.{Failure, Success}
+
 package object WebsocketClientTypes {
   type WebsocketMessageSink = Sink[Message, Future[Done]];
   type DiscordMessageHandler = (DiscordMessage) => Unit
@@ -78,11 +80,11 @@ class WebsocketClient(config: WebsocketClientConfig) {
 //    val webSocketFlow = Http().webSocketClientFlow(WebSocketRequest(config.socketUrl))
 
     val flow =
-      Flow.fromSinkAndSource(
+      Flow.fromSinkAndSourceMat(
         config.sink,
-        source)
+        source)((Keep.both))
 
-    val (upgradeResponse, closed) =
+    val (upgradeResponse, (sinkClose, sourceClose)) =
       Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
 
     val connected = upgradeResponse.map { upgrade =>
@@ -98,6 +100,10 @@ class WebsocketClient(config: WebsocketClientConfig) {
     // in a real application you would not side effect here
     // and handle errors more carefully
     connected.onComplete(println)
+    sinkClose.onComplete {
+      case Success(_) => println("Connection closed gracefully")
+      case Failure(e) => println(f"Connection closed with an error: $e")
+    }
     // closed.asd() TODO: how do we wait for "closed"?
   }
 }
