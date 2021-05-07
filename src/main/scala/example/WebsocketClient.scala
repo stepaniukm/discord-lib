@@ -6,12 +6,32 @@ import akka.http.scaladsl.Http
 import akka.stream.scaladsl._
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.model.ws._
+import akka.http.scaladsl.marshalling.Marshal
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 
 import scala.concurrent.Future
+import scala.concurrent.duration._
+import spray.json.DefaultJsonProtocol._
 
 package object WebsocketClientTypes {
   type WebsocketMessageSink = Sink[Message, Future[Done]];
+  type DiscordMessageHandler = (DiscordMessage) => Unit
 }
+
+case class DiscordMessage(
+  // https://discord.com/developers/docs/topics/gateway
+  op: Int,
+  s: Option[Int] = None,
+  t: Option[String] = None
+)
+
+case class IncomingPayloadHeartbeat(
+  heartbeat_interval: Int
+)
+
+case class IncomingPayloadInvalidSession(
+  heartbeat_interval: Int
+)
 
 case class WebsocketClientConfig(
   socketUrl: String,
@@ -19,36 +39,57 @@ case class WebsocketClientConfig(
 );
 
 class WebsocketClient(config: WebsocketClientConfig) {
+  implicit val discordMessageFormat = jsonFormat3(DiscordMessage);
+
+  def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]): DiscordMessage =
+    DiscordMessage(
+      op = 1,
+      s = lastSeenSequenceNumber
+    )
+
   def run(): Unit = {
     implicit val system: ActorSystem = ActorSystem()
     import system.dispatcher
 
-    val helloSource: Source[Message, NotUsed] =
-      Source.single(TextMessage("hello world!"))
+    val bufferSize = 1000
+    val overflowStrategy = akka.stream.OverflowStrategy.fail
 
-    // the Future[Done] is the materialized value of Sink.foreach
-    // and it is completed when the stream completes
-    val flow: Flow[Message, Message, Future[Done]] =
-    Flow.fromSinkAndSourceMat(config.sink, helloSource)(Keep.left)
+    // https://stackoverflow.com/a/33415214
+    val (queue, source) = Source
+      .queue[DiscordMessage](bufferSize, overflowStrategy)
+      .map[Message](m => {
+        val text = TextMessage(discordMessageFormat.write(m).toString());
+        println(text);
+        return text;
+      })
+      .preMaterialize();
 
-    // upgradeResponse is a Future[WebSocketUpgradeResponse] that
-    // completes or fails when the connection succeeds or fails
-    // and closed is a Future[Done] representing the stream completion from above
+    system.scheduler.scheduleAtFixedRate(3.seconds, 1.seconds) {
+      () => {
+        println("scheduling")
+        queue.offer(createOutgoingPayloadHeartbeat(None))
+        queue.offer(createOutgoingPayloadHeartbeat(None))
+      }
+    }
+
+    // flow to use (note: not re-usable!)
+    val webSocketFlow = Http().webSocketClientFlow(WebSocketRequest(config.socketUrl))
+
     val (upgradeResponse, closed) =
-    Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
+    source
+      .viaMat(webSocketFlow)(Keep.right) // keep the materialized Future[WebSocketUpgradeResponse]
+      .toMat(config.sink)(Keep.both) // also keep the Future[Done]
+      .run()
 
-    val connected = upgradeResponse.map { upgrade =>
-      // just like a regular http request we can access response status which is available via upgrade.response.status
-      // status code 101 (Switching Protocols) indicates that server support WebSockets
+    val connected = upgradeResponse.flatMap { upgrade =>
       if (upgrade.response.status == StatusCodes.SwitchingProtocols) {
-        Done
+        Future.successful(Done)
       } else {
         throw new RuntimeException(s"Connection failed: ${upgrade.response.status}")
       }
     }
 
     // in a real application you would not side effect here
-    // and handle errors more carefully
     connected.onComplete(println)
     closed.foreach(_ => println("closed"))
   }
