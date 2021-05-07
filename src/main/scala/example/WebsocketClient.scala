@@ -8,8 +8,9 @@ import akka.http.scaladsl.model._
 import akka.http.scaladsl.model.ws._
 import akka.http.scaladsl.marshalling.Marshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import akka.stream.QueueOfferResult
 
-import scala.concurrent.Future
+import scala.concurrent.{Future, Promise}
 import scala.concurrent.duration._
 import spray.json.DefaultJsonProtocol._
 
@@ -48,49 +49,55 @@ class WebsocketClient(config: WebsocketClientConfig) {
     )
 
   def run(): Unit = {
-    implicit val system: ActorSystem = ActorSystem()
+    implicit val system: ActorSystem = ActorSystem("websocket")
     import system.dispatcher
 
     val bufferSize = 1000
-    val overflowStrategy = akka.stream.OverflowStrategy.fail
+    val overflowStrategy = akka.stream.OverflowStrategy.backpressure
 
     // https://stackoverflow.com/a/33415214
     val (queue, source) = Source
       .queue[DiscordMessage](bufferSize, overflowStrategy)
-      .map[Message](m => {
-        val text = TextMessage(discordMessageFormat.write(m).toString());
-        println(text);
-        return text;
-      })
-      .preMaterialize();
+      .map[Message](m => TextMessage(discordMessageFormat.write(m).toString())
+      )
+      .preMaterialize()
 
-    system.scheduler.scheduleAtFixedRate(3.seconds, 1.seconds) {
+    system.scheduler.scheduleAtFixedRate(2.seconds, 10.seconds) {
       () => {
         println("scheduling")
-        queue.offer(createOutgoingPayloadHeartbeat(None))
-        queue.offer(createOutgoingPayloadHeartbeat(None))
+        queue.offer(createOutgoingPayloadHeartbeat(None)).map {
+          case QueueOfferResult.Enqueued => println(s"enqueued")
+          case QueueOfferResult.Dropped => println(s"dropped")
+          case QueueOfferResult.Failure(ex) => println(s"Offer failed ${ex.getMessage}")
+          case QueueOfferResult.QueueClosed => println("Source Queue closed")
+        }
       }
     }
 
     // flow to use (note: not re-usable!)
-    val webSocketFlow = Http().webSocketClientFlow(WebSocketRequest(config.socketUrl))
+//    val webSocketFlow = Http().webSocketClientFlow(WebSocketRequest(config.socketUrl))
+
+    val flow =
+      Flow.fromSinkAndSource(
+        config.sink,
+        source)
 
     val (upgradeResponse, closed) =
-    source
-      .viaMat(webSocketFlow)(Keep.right) // keep the materialized Future[WebSocketUpgradeResponse]
-      .toMat(config.sink)(Keep.both) // also keep the Future[Done]
-      .run()
+      Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
 
-    val connected = upgradeResponse.flatMap { upgrade =>
+    val connected = upgradeResponse.map { upgrade =>
+      // just like a regular http request we can access response status which is available via upgrade.response.status
+      // status code 101 (Switching Protocols) indicates that server support WebSockets
       if (upgrade.response.status == StatusCodes.SwitchingProtocols) {
-        Future.successful(Done)
+        Done
       } else {
         throw new RuntimeException(s"Connection failed: ${upgrade.response.status}")
       }
     }
 
     // in a real application you would not side effect here
+    // and handle errors more carefully
     connected.onComplete(println)
-    closed.foreach(_ => println("closed"))
+    // closed.asd() TODO: how do we wait for "closed"?
   }
 }

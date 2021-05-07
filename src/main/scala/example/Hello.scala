@@ -72,7 +72,7 @@ object Example extends App {
 
   new WebsocketClient(
     WebsocketClientConfig(
-      "wss://gateway.discord.gg/?v=8&encoding=json",
+      "wss://gateway.discord.gg/?v=9&encoding=json",
       sink = messageSink
     )
   ).run();
