@@ -23,6 +23,7 @@ import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import akka.http.scaladsl.model.ws.TextMessage
 import spray.json.DefaultJsonProtocol._
 import spray.json.DefaultJsonProtocol
+import spray.json.RootJsonFormat
 import akka.stream.scaladsl.{Flow, Sink}
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.http.scaladsl.unmarshalling.Unmarshaller
@@ -52,14 +53,14 @@ case class Channel(
 );
 
 object MyJsonProtocol extends DefaultJsonProtocol {
-  implicit val channelFormat = jsonFormat20(Channel);
+  implicit val channelFormat: RootJsonFormat[Channel] = jsonFormat20(Channel.apply);
 }
 
 object Example extends App {
   import MyJsonProtocol.channelFormat;
 
-  implicit val system = ActorSystem("http-client")
-  implicit val materializer = ActorMaterializer()
+  implicit val system: ActorSystem = ActorSystem("http-client")
+  implicit val materializer: ActorMaterializer = ActorMaterializer()
 
   val token = env.get("TOKEN");
 
