@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion     := "2.13.4"
+ThisBuild / scalaVersion     := "2.13.5"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
@@ -19,8 +19,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
   "org.typelevel" %% "cats-core" % "2.3.0",
   "org.typelevel" %% "cats-effect" % "3.1.0",
-  "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion,
-  "net.liftweb" %% "lift-json" % "3.4.3"
+  "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion
 )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

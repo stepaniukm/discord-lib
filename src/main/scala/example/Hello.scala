@@ -24,24 +24,42 @@ import akka.http.scaladsl.model.ws.TextMessage
 import spray.json.DefaultJsonProtocol._
 import spray.json.DefaultJsonProtocol
 import akka.stream.scaladsl.{Flow, Sink}
-import net.liftweb.json._
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
+import akka.http.scaladsl.unmarshalling.Unmarshaller
+import akka.http.scaladsl.model.HttpEntity
 
 case class Channel(
-    id: String,
-    last_message_id: String,
-    name: String,
-    position: String,
-    parent_id: String,
-    topic: String,
-    guild_id: String,
-    nsfw: Boolean,
-    rate_limit_per_user: Int
+  id: String,
+  `type`: Int,
+  guild_id: String,
+  position: Option[Int],
+  name: Option[String],
+  topic: Option[String],
+  nsfw: Option[Boolean],
+  last_message_id: Option[String],
+  bitrate: Option[Int],
+  user_limit: Option[Int],
+  rate_limit_per_user: Option[Int],
+  icon: Option[String],
+  owner_id: Option[String],
+  application_id: Option[String],
+  parent_id: Option[String],
+  last_pin_timestamp: Option[String],
+  rtc_region: Option[String],
+  video_quality_mode: Option[Int],
+  message_count: Option[Int],
+  member_count: Option[Int]
 );
 
+object MyJsonProtocol extends DefaultJsonProtocol {
+  implicit val channelFormat = jsonFormat20(Channel);
+}
+
 object Example extends App {
+  import MyJsonProtocol.channelFormat;
+
   implicit val system = ActorSystem("http-client")
   implicit val materializer = ActorMaterializer()
-  implicit val formats = DefaultFormats
 
   val token = env.get("TOKEN");
 
@@ -71,14 +89,12 @@ object Example extends App {
 
       val c = for {
         response <- Http().singleRequest(request)
-        content <- Unmarshal(response.entity).to[String]
+        content <- Unmarshal(response.entity).to[Channel]
       } yield content
 
       val result = Await.result(c, 10.seconds);
 
-      val extractedChannel = parse(result).extract[Channel];
-
-      println(extractedChannel.id);
+      println(result.`type`);
 
     }
     case None => {
