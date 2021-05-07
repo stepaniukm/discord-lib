@@ -13,15 +13,17 @@ import akka.http.scaladsl.Http
 import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.stream.ActorMaterializer
 import akka.actor.ActorSystem
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.Await
 import akka.http.scaladsl.model.headers.RawHeader
 import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import akka.http.scaladsl.model.ws.TextMessage
 import spray.json.DefaultJsonProtocol._
 import spray.json.DefaultJsonProtocol
-import akka.stream.scaladsl.Flow
+import akka.stream.scaladsl.{Flow, Sink}
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.http.scaladsl.unmarshalling.Unmarshaller
 import akka.http.scaladsl.model.HttpEntity
@@ -60,6 +62,20 @@ object Example extends App {
   implicit val materializer = ActorMaterializer()
 
   val token = env.get("TOKEN");
+
+  val messageSink: WebsocketClientTypes.WebsocketMessageSink = Sink.foreach {
+    case message: TextMessage.Strict =>
+      println(message.text)
+    case _ =>
+    // ignore other message types
+  };
+
+  new WebsocketClient(
+    WebsocketClientConfig(
+      "wss://gateway.discord.gg/?v=8&encoding=json",
+      sink = messageSink
+    )
+  ).run();
 
   token match {
     case Some(value) => {
