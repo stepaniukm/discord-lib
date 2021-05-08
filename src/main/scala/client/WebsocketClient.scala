@@ -1,5 +1,6 @@
-package example
+package client
 
+import client.websocket.{EventData, IdentityEventData, HelloEventData, EventDataFormat, IdentityProperties}
 import akka.actor.ActorSystem
 import akka.{Done, NotUsed}
 import akka.http.scaladsl.Http
@@ -18,36 +19,6 @@ import scala.util.{Failure, Success}
 import spray.json._
 import akka.http.scaladsl.unmarshalling.Unmarshal
 
-package object WebsocketClientTypes {
-  type WebsocketMessageSink = Sink[Message, Future[Done]];
-  type DiscordMessageHandler = (DiscordMessage) => Unit
-}
-
-case class Activity(name: String, `type`: Int);
-
-case class IdentityProperties($os: String, $browser: String, $device: String);
-
-case class UpdatePresence(
-    since: Int,
-    activities: List[Activity],
-    status: String,
-    afk: Boolean
-)
-
-sealed trait EventData
-
-case class HelloEventData(heartbeat_interval: Int) extends EventData;
-
-case class IdentityEventData(
-    token: String,
-    intents: Int,
-    properties: IdentityProperties,
-    compress: Option[Boolean] = None,
-    large_threshold: Option[Int] = None,
-    shard: Option[Tuple2[Int, Int]] = None,
-    presence: Option[UpdatePresence] = None
-) extends EventData;
-
 case class DiscordMessage(
     // https://discord.com/developers/docs/topics/gateway
     op: Int,
@@ -56,57 +27,14 @@ case class DiscordMessage(
     t: Option[String] = None
 )
 
-case class IncomingPayloadHeartbeat(
-    heartbeat_interval: Int
-)
-
-case class IncomingPayloadInvalidSession(
-    heartbeat_interval: Int
-)
-
 case class WebsocketClientConfig(
     socketUrl: String,
     token: String
 );
 
 class WebsocketClient(config: WebsocketClientConfig) {
-  implicit val helloEventDataFormat = jsonFormat1(HelloEventData)
-  implicit val identityPropertiesFormat = jsonFormat3(IdentityProperties)
-  implicit val activityFormat = jsonFormat2(Activity)
-  implicit val presenceFormat = jsonFormat4(UpdatePresence)
-
-  implicit val eventDataFormat = new JsonFormat[EventData] {
-    override def write(obj: EventData): JsValue = obj match {
-      case HelloEventData(heartbeat_interval) =>
-        JsObject("heartbeat_interval" -> heartbeat_interval.toJson)
-      case IdentityEventData(
-            token,
-            intents,
-            properties,
-            compress,
-            large_threshold,
-            shard,
-            presence
-          ) =>
-        JsObject(
-          "token" -> token.toJson,
-          "intents" -> intents.toJson,
-          "properties" -> properties.toJson,
-          "compress" -> compress.toJson,
-          "large_threshold" -> large_threshold.toJson,
-          "shard" -> shard.toJson,
-          "presence" -> presence.toJson
-        )
-    }
-
-    override def read(json: JsValue): EventData =
-      json.asJsObject.getFields("heartbeat_interval") match {
-        case Seq(JsNumber(value)) => json.convertTo[HelloEventData]
-        case _ => {
-          throw new RuntimeException(s"Invalid json format: $json")
-        }
-      }
-  }
+  type WebsocketMessageSink = Sink[Message, Future[Done]];
+  import EventDataFormat._
 
   implicit val discordMessageOutFormat = jsonFormat4(DiscordMessage);
 
@@ -114,8 +42,7 @@ class WebsocketClient(config: WebsocketClientConfig) {
       lastSeenSequenceNumber: Option[Int]
   ) =
     DiscordMessage(
-      op = 1,
-      d = Left("123")
+      op = 1
     )
 
   def createIdentityPayload() = DiscordMessage(
@@ -174,7 +101,7 @@ class WebsocketClient(config: WebsocketClientConfig) {
       }
     }
 
-    val messageSink: WebsocketClientTypes.WebsocketMessageSink = Sink.foreach {
+    val messageSink: WebsocketMessageSink = Sink.foreach {
       case message: TextMessage.Strict =>
         print("RAWEST: ");
         println(message);
