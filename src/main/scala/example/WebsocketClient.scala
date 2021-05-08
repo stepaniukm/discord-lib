@@ -92,10 +92,10 @@ class WebsocketClient(config: WebsocketClientConfig) {
           "token" -> token.toJson,
           "intents" -> intents.toJson,
           "properties" -> properties.toJson,
-          // "compress" -> compress.toJson,
-          // "large_threshold" -> large_threshold.toJson,
-          "shard" -> shard.toJson
-          // "presence" -> presence.toJson
+          "compress" -> compress.toJson,
+          "large_threshold" -> large_threshold.toJson,
+          "shard" -> shard.toJson,
+          "presence" -> presence.toJson
         )
     }
 
@@ -130,7 +130,9 @@ class WebsocketClient(config: WebsocketClientConfig) {
             $browser = "disco",
             $device = "disco"
           ),
-          shard = Some((0, 1))
+          shard = Some((0, 1)),
+          compress = Some(false),
+          large_threshold = Some(250),
         )
       )
     )
@@ -174,6 +176,8 @@ class WebsocketClient(config: WebsocketClientConfig) {
 
     val messageSink: WebsocketClientTypes.WebsocketMessageSink = Sink.foreach {
       case message: TextMessage.Strict =>
+        print("RAWEST: ");
+        println(message);
         val parsed = Unmarshal(message.text).to[DiscordMessage];
 
         parsed.map { m =>
@@ -188,8 +192,8 @@ class WebsocketClient(config: WebsocketClientConfig) {
                       case Some(value1) => {
                         value1 match {
                           case HelloEventData(heartbeat_interval) => {
-                            queue.offer(createIdentityPayload)
                             createHeartbeatScheduler(heartbeat_interval)
+                            queue.offer(createIdentityPayload)
                           }
                         }
                       }
