@@ -19,36 +19,38 @@ package object WebsocketClientTypes {
 }
 
 case class DiscordMessage(
-  // https://discord.com/developers/docs/topics/gateway
-  op: Int,
-  s: Option[Int] = None,
-  t: Option[String] = None
+    // https://discord.com/developers/docs/topics/gateway
+    op: Int,
+    s: Option[Int] = None,
+    t: Option[String] = None
 )
 
 case class IncomingPayloadHeartbeat(
-  heartbeat_interval: Int
+    heartbeat_interval: Int
 )
 
 case class IncomingPayloadInvalidSession(
-  heartbeat_interval: Int
+    heartbeat_interval: Int
 )
 
 case class WebsocketClientConfig(
-  socketUrl: String,
-  sink: WebsocketClientTypes.WebsocketMessageSink,
+    socketUrl: String,
+    sink: WebsocketClientTypes.WebsocketMessageSink
 );
 
 class WebsocketClient(config: WebsocketClientConfig) {
   implicit val discordMessageFormat = jsonFormat3(DiscordMessage);
 
-  def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]): DiscordMessage =
+  def createOutgoingPayloadHeartbeat(
+      lastSeenSequenceNumber: Option[Int]
+  ): DiscordMessage =
     DiscordMessage(
       op = 1,
       s = lastSeenSequenceNumber
     )
 
   def run(): Unit = {
-    implicit val system: ActorSystem = ActorSystem()
+    implicit val system: ActorSystem = ActorSystem("Websockets")
     import system.dispatcher
 
     val bufferSize = 1000
@@ -58,34 +60,39 @@ class WebsocketClient(config: WebsocketClientConfig) {
     val (queue, source) = Source
       .queue[DiscordMessage](bufferSize, overflowStrategy)
       .map[Message](m => {
-        val text = TextMessage(discordMessageFormat.write(m).toString());
-        println(text);
-        return text;
+        val t = TextMessage(discordMessageFormat.write(m).toString())
+        println("T")
+        println(t)
+        t
       })
       .preMaterialize();
 
-    system.scheduler.scheduleAtFixedRate(3.seconds, 1.seconds) {
-      () => {
+    system.scheduler.scheduleAtFixedRate(0.seconds, 1.seconds) { () =>
+      {
         println("scheduling")
-        queue.offer(createOutgoingPayloadHeartbeat(None))
         queue.offer(createOutgoingPayloadHeartbeat(None))
       }
     }
 
     // flow to use (note: not re-usable!)
-    val webSocketFlow = Http().webSocketClientFlow(WebSocketRequest(config.socketUrl))
+    val webSocketFlow =
+      Http().webSocketClientFlow(WebSocketRequest(config.socketUrl))
 
     val (upgradeResponse, closed) =
-    source
-      .viaMat(webSocketFlow)(Keep.right) // keep the materialized Future[WebSocketUpgradeResponse]
-      .toMat(config.sink)(Keep.both) // also keep the Future[Done]
-      .run()
+      source
+        .viaMat(webSocketFlow)(
+          Keep.right
+        ) // keep the materialized Future[WebSocketUpgradeResponse]
+        .toMat(config.sink)(Keep.both) // also keep the Future[Done]
+        .run()
 
     val connected = upgradeResponse.flatMap { upgrade =>
       if (upgrade.response.status == StatusCodes.SwitchingProtocols) {
         Future.successful(Done)
       } else {
-        throw new RuntimeException(s"Connection failed: ${upgrade.response.status}")
+        throw new RuntimeException(
+          s"Connection failed: ${upgrade.response.status}"
+        )
       }
     }
 
