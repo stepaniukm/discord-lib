@@ -6,17 +6,17 @@ import spray.json.{JsonFormat, JsValue, JsObject, JsNumber}
 import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 
-import client.domain.{User, UserFormat, GuildPreview, GuildPreviewFormat}
+import client.domain.{User, UserFormat, UnavailableGuild, UnavailableGuildFormat}
 
 sealed trait IncomingEventData
 
 case class HelloEventData(heartbeat_interval: Int) extends IncomingEventData;
 
-case class ReadyEventData(v: Int, user: User, guilds: List[GuildPreview], session_id: String, shard: Option[Tuple2[Int, Int]]) extends IncomingEventData
+case class ReadyEventData(v: Int, user: User, guilds: List[UnavailableGuild], session_id: String, shard: Option[Tuple2[Int, Int]]) extends IncomingEventData
 
 object IncomingEventDataFormat {
   import UserFormat.userFormat;
-  import GuildPreviewFormat.guildPreviewFormat;
+  import UnavailableGuildFormat.unavailableGuildFormat;
 
   implicit val helloEventDataFormat = jsonFormat1(HelloEventData)
   implicit val readyEventDataFormat = jsonFormat5(ReadyEventData)
@@ -35,10 +35,6 @@ object IncomingEventDataFormat {
 
     override def read(json: JsValue): IncomingEventData = {
       val j = json.asJsObject;
-
-      println("-----------------------------------------------")
-      println(j.getFields("v", "user", "guilds", "session_id").size)
-      println("-----------------------------------------------")
 
       if (j.getFields("heartbeat_interval").size == 1) {
         return json.convertTo[HelloEventData]
