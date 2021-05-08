@@ -19,7 +19,11 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
   "org.typelevel" %% "cats-core" % "2.3.0",
   "org.typelevel" %% "cats-effect" % "3.1.0",
-  "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion
+  "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion,
+  "com.github.julien-truffaut" %% "monocle-core"  % "3.0.0-M5",
+  "com.github.julien-truffaut" %% "monocle-macro" % "3.0.0-M5",
 )
+
+scalacOptions in Global += "-Ymacro-annotations"
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

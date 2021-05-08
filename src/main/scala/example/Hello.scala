@@ -63,22 +63,14 @@ object Example extends App {
 
   val token = env.get("TOKEN");
 
-  val messageSink: WebsocketClientTypes.WebsocketMessageSink = Sink.foreach {
-    case message: TextMessage.Strict =>
-      println(message.text)
-    case _ =>
-    // ignore other message types
-  };
-
-  new WebsocketClient(
-    WebsocketClientConfig(
-      "wss://gateway.discord.gg/?v=8&encoding=json",
-      sink = messageSink
-    )
-  ).run();
-
   token match {
     case Some(value) => {
+      new WebsocketClient(
+        WebsocketClientConfig(
+          socketUrl = "wss://gateway.discord.gg/?v=9&encoding=json",
+          token = value,
+        )
+      ).run();
       val authHeader = RawHeader("Authorization", f"Bot $value");
 
       val request = HttpRequest(
