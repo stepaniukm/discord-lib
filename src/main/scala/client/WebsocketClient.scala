@@ -124,7 +124,7 @@ class WebsocketClient(config: WebsocketClientConfig) {
 
     val messageSink: WebsocketMessageSink = Sink.foreach {
       case message: TextMessage.Strict => {
-        print("RAWEST: ");
+        print("RAW: ");
         println(message);
         val parsed = Unmarshal(message.text).to[IncomingDiscordMessage];
 
@@ -135,11 +135,9 @@ class WebsocketClient(config: WebsocketClientConfig) {
       }
     };
 
-    val flow =
-      Flow.fromSinkAndSourceMat(messageSink, source)((Keep.both))
+    val flow = Flow.fromSinkAndSourceMat(messageSink, source)((Keep.both))
 
-    val (upgradeResponse, (sinkClose, _)) =
-      Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
+    val (upgradeResponse, (sinkClose, _)) = Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
 
     val connected = upgradeResponse.map { upgrade =>
       if (upgrade.response.status == StatusCodes.SwitchingProtocols) {
