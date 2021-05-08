@@ -226,8 +226,6 @@ class WebsocketClient(config: WebsocketClientConfig) {
       Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
 
     val connected = upgradeResponse.map { upgrade =>
-      // just like a regular http request we can access response status which is available via upgrade.response.status
-      // status code 101 (Switching Protocols) indicates that server support WebSockets
       if (upgrade.response.status == StatusCodes.SwitchingProtocols) {
         Done
       } else {
@@ -237,13 +235,10 @@ class WebsocketClient(config: WebsocketClientConfig) {
       }
     }
 
-    // in a real application you would not side effect here
-    // and handle errors more carefully
     connected.onComplete(println)
     sinkClose.onComplete {
       case Success(_) => println("Connection closed gracefully")
       case Failure(e) => println(f"Connection closed with an error: $e")
     }
-    // closed.asd() TODO: how do we wait for "closed"?
   }
 }
