@@ -103,6 +103,11 @@ class WebsocketClient(config: WebsocketClientConfig) {
     message.d.map { (optionalData) =>
       optionalData.map { (data) =>
         data match {
+          case ReadyEventData(v, user, guilds, session_id, shard) => {
+            println("##############################################")
+            println("I'm ready!")
+            println("##############################################")
+          }
           case HelloEventData(heartbeat_interval) => {
             createHeartbeatScheduler(heartbeat_interval) {
               queue.offer(createOutgoingPayloadHeartbeat(None)).map {
@@ -115,11 +120,6 @@ class WebsocketClient(config: WebsocketClientConfig) {
               }
             }
             queue.offer(createIdentityPayload)
-          }
-          case ReadyEventData(v, user, guilds, session_id, shard) => {
-            println("##############################################")
-            println("I'm ready!")
-            println("##############################################")
           }
         }
       }
