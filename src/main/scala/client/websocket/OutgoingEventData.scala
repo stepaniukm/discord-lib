@@ -6,9 +6,9 @@ import spray.json.{JsonFormat, JsValue, JsObject, JsNumber}
 import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 
-case class Activity(name: String, `type`: Int);
+sealed trait OutgoingEventData
 
-case class IdentityProperties($os: String, $browser: String, $device: String);
+case class Activity(name: String, `type`: Int);
 
 case class UpdatePresence(
     since: Int,
@@ -17,11 +17,10 @@ case class UpdatePresence(
     afk: Boolean
 )
 
-sealed trait EventData
-
-case class HelloEventData(heartbeat_interval: Int) extends EventData;
+case class IdentityProperties($os: String, $browser: String, $device: String);
 
 case class IdentityEventData(
+    `type`: String = "Identity",
     token: String,
     intents: Int,
     properties: IdentityProperties,
@@ -29,19 +28,18 @@ case class IdentityEventData(
     large_threshold: Option[Int] = None,
     shard: Option[Tuple2[Int, Int]] = None,
     presence: Option[UpdatePresence] = None
-) extends EventData;
+) extends OutgoingEventData;
 
-object EventDataFormat {
-implicit val helloEventDataFormat = jsonFormat1(HelloEventData)
-  implicit val identityPropertiesFormat = jsonFormat3(IdentityProperties)
+object OutgoingEventDataFormat {
   implicit val activityFormat = jsonFormat2(Activity)
   implicit val presenceFormat = jsonFormat4(UpdatePresence)
+  implicit val identityPropertiesFormat = jsonFormat3(IdentityProperties)
+  implicit val identityEventData = jsonFormat8(IdentityEventData)
 
-  implicit val eventDataFormat = new JsonFormat[EventData] {
-    override def write(obj: EventData): JsValue = obj match {
-      case HelloEventData(heartbeat_interval) =>
-        JsObject("heartbeat_interval" -> heartbeat_interval.toJson)
+  implicit val outgoingEventDataFormat = new JsonFormat[OutgoingEventData] {
+    override def write(obj: OutgoingEventData): JsValue = obj match {
       case IdentityEventData(
+            _,
             token,
             intents,
             properties,
@@ -61,12 +59,13 @@ implicit val helloEventDataFormat = jsonFormat1(HelloEventData)
         )
     }
 
-    override def read(json: JsValue): EventData =
-      json.asJsObject.getFields("heartbeat_interval") match {
-        case Seq(JsNumber(value)) => json.convertTo[HelloEventData]
+    override def read(json: JsValue): OutgoingEventData = {
+      json.asJsObject.getFields("type") match {
+        case Seq(JsString("Identity")) => json.convertTo[IdentityEventData]
         case _ => {
           throw new RuntimeException(s"Invalid json format: $json")
         }
       }
+    }
   }
 }
