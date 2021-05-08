@@ -1,6 +1,15 @@
 package client
 
-import client.websocket.{OutgoingEventDataFormat, IncomingEventDataFormat, IncomingEventData, OutgoingEventData, IdentityEventData, IdentityProperties, HelloEventData}
+import client.websocket.{
+  OutgoingEventDataFormat,
+  IncomingEventDataFormat,
+  IncomingEventData,
+  OutgoingEventData,
+  IdentityEventData,
+  IdentityProperties,
+  HelloEventData,
+  ReadyEventData
+}
 import akka.actor.ActorSystem
 import akka.{Done, NotUsed}
 import akka.http.scaladsl.Http
@@ -53,7 +62,8 @@ class WebsocketClient(config: WebsocketClientConfig) {
   implicit val system: ActorSystem = ActorSystem("websocket")
   import system.dispatcher
 
-  def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]) = OutgoingDiscordMessage(op = 1)
+  def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]) =
+    OutgoingDiscordMessage(op = 1)
 
   def createIdentityPayload() = OutgoingDiscordMessage(
     op = 2,
@@ -106,6 +116,11 @@ class WebsocketClient(config: WebsocketClientConfig) {
             }
             queue.offer(createIdentityPayload)
           }
+          case ReadyEventData(v, user, guilds, session_id, shard) => {
+            println("##############################################")
+            println("I'm ready!")
+            println("##############################################")
+          }
         }
       }
     }
@@ -117,9 +132,12 @@ class WebsocketClient(config: WebsocketClientConfig) {
         WebsocketQueueConfig.bufferSize,
         WebsocketQueueConfig.overflowStrategy
       )
-      .map[Message](m =>
-        TextMessage(discordMessageOutFormat.write(m).toString())
-      )
+      .map[Message](m => {
+        val t = TextMessage(discordMessageOutFormat.write(m).toString())
+
+        println("SENT: ", t)
+        t
+      })
       .preMaterialize();
 
     val messageSink: WebsocketMessageSink = Sink.foreach {
@@ -137,7 +155,8 @@ class WebsocketClient(config: WebsocketClientConfig) {
 
     val flow = Flow.fromSinkAndSourceMat(messageSink, source)((Keep.both))
 
-    val (upgradeResponse, (sinkClose, _)) = Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
+    val (upgradeResponse, (sinkClose, _)) =
+      Http().singleWebSocketRequest(WebSocketRequest(config.socketUrl), flow)
 
     val connected = upgradeResponse.map { upgrade =>
       if (upgrade.response.status == StatusCodes.SwitchingProtocols) {
