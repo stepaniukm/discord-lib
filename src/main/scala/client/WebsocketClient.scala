@@ -61,7 +61,7 @@ class WebsocketClient(config: WebsocketClientConfig) {
   import system.dispatcher
 
   def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]) =
-    OutgoingDiscordMessage(op = 1)
+    OutgoingDiscordMessage(op = 1) // TODO: Pass lastSeenSequenceNumber
 
   def createIdentityPayload() = OutgoingDiscordMessage(
     op = 2,
@@ -138,9 +138,11 @@ class WebsocketClient(config: WebsocketClientConfig) {
 
     val messageSink: WebsocketMessageSink = Sink.foreach {
       case message: TextMessage.Strict => {
-        print("RAW: ");
+        print("Received Raw: ");
         println(message);
         val parsed = Unmarshal(message.text).to[IncomingDiscordMessage];
+        print("Received Parsed: ");
+        println(parsed);
 
         parsed.map(onDiscordMessage(queue))
       }
