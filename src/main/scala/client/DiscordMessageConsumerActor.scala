@@ -7,8 +7,7 @@ import client.websocket.{HelloEventData, IdentityEventData, IdentityProperties, 
 object DiscordMessageConsumerActor {
   type SendMessageFn = (OutgoingDiscordMessage) => Unit;
 
-  // TODO: temporary, I believe we should inject the config when constructing the actor system instead
-  final case class ReceiveMessage(m: IncomingDiscordMessage, config: DiscordWebsocketClientConfig)
+  final case class ReceiveMessage(m: IncomingDiscordMessage)
 
   def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]) =
     OutgoingDiscordMessage(op = 1) // TODO: Pass lastSeenSequenceNumber
@@ -52,14 +51,14 @@ object DiscordMessageConsumerActor {
     }
   }
 
-  def apply(queue: ActorRef[EnqueueOutgoingMessage]): Behavior[ReceiveMessage] = Behaviors.receive { (context, message) =>
-    context.log.info("Hello {}!", message)
+  def apply(queue: ActorRef[EnqueueOutgoingMessage], config: DiscordWebsocketClientConfig): Behavior[ReceiveMessage] = Behaviors.receive { (context, message) =>
+    Debug.log("DiscordMessageConsumerActor received")
 
     val sendMessageFn: SendMessageFn = (outgoing: OutgoingDiscordMessage) => {
       val jsonString = outgoingDiscordMessageFormat.write(outgoing).toString();
       queue ! EnqueueOutgoingMessage(jsonString)
     }
-    onDiscordMessage(sendMessageFn)(message.m, message.config)
+    onDiscordMessage(sendMessageFn)(message.m, config)
 
     Behaviors.same
   }

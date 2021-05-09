@@ -24,7 +24,7 @@ class DiscordWebsocketClient(config: DiscordWebsocketClientConfig) {
 
   import system.dispatcher
 
-  var messageConsumerActor: Option[ActorRef[DiscordMessageConsumerActor.ReceiveMessage]] = None;
+  var messageConsumerActor: ActorRef[DiscordMessageConsumerActor.ReceiveMessage] = _;
 
   val messageSinkFactory: WebsocketMessageSinkFactory = (queue) => Sink.foreach {
     case message: TextMessage.Strict => {
@@ -32,10 +32,7 @@ class DiscordWebsocketClient(config: DiscordWebsocketClientConfig) {
       val parsed = Unmarshal(message.text).to[IncomingDiscordMessage];
       Debug.log("Received parsed:", parsed);
 
-      messageConsumerActor match {
-        case Some(actor) => parsed.map(p => actor ! ReceiveMessage(p, config))
-        case None => Debug.log("Actor not initialized yet")
-      }
+      parsed.map(p => messageConsumerActor ! ReceiveMessage(p))
     }
   };
 
@@ -49,14 +46,14 @@ class DiscordWebsocketClient(config: DiscordWebsocketClientConfig) {
     websocketClient.run()
 
     // careful, we're using akka Typed as opposed to Classic above
-    akka.actor.typed.ActorSystem(createActors(), "websocket-processing");
+    akka.actor.typed.ActorSystem(createActors(), "discord-websocket-processing");
   }
 
   def createActors(): Behavior[NotUsed] =
     Behaviors.setup { context =>
-      val messageQueueActor = context.spawn(DiscordMessageQueueActor.create(this.websocketClient.queue), "messageQueueActor")
-      val messageConsumerActor = context.spawn(DiscordMessageConsumerActor(messageQueueActor), "messageConsumerActor")
-      this.messageConsumerActor = Some(messageConsumerActor);
+      val messageQueueActor = context.spawn(DiscordMessageQueueActor(this.websocketClient.queue), "messageQueueActor")
+      val messageConsumerActor = context.spawn(DiscordMessageConsumerActor(messageQueueActor, config), "messageConsumerActor")
+      this.messageConsumerActor = messageConsumerActor;
       context.watch(messageConsumerActor)
 
       Behaviors.receiveSignal {

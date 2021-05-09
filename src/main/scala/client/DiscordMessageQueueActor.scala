@@ -9,7 +9,7 @@ import akka.stream.scaladsl.SourceQueue
 final case class EnqueueOutgoingMessage(text: String)
 
 object DiscordMessageQueueActor {
-  def create(queue: SourceQueue[Message]): Behavior[EnqueueOutgoingMessage] = {
+  def apply(queue: SourceQueue[Message]): Behavior[EnqueueOutgoingMessage] = {
     Behaviors.receive { (context, message) =>
       context.log.info("Got {}", message);
       // TODO: This will probably error if called from multiple threads :(
