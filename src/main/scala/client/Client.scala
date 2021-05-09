@@ -1,11 +1,10 @@
 package client
 
 import client.domain.{Channel, ChannelFormat}
-import client.{WebsocketClient, WebsocketClientConfig};
-import akka.http.scaladsl.model.headers.{RawHeader}
+import akka.http.scaladsl.model.headers.RawHeader
 import akka.http.scaladsl.model.{HttpRequest, HttpMethods}
-import akka.http.scaladsl.{Http}
-import akka.http.scaladsl.unmarshalling.{Unmarshal, Unmarshaller}
+import akka.http.scaladsl.Http
+import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
@@ -14,15 +13,18 @@ import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
 
 class Client(val token: String) {
+
   import ChannelFormat.channelFormat
+
   implicit val system = ActorSystem("http-client")
   implicit val materializer = ActorMaterializer()
-  new WebsocketClient(
-    WebsocketClientConfig(
-      socketUrl = "wss://gateway.discord.gg/?v=9&encoding=json",
+
+  new DiscordWebsocketClient(
+    DiscordWebsocketClientConfig(
       token = token
     )
   ).run();
+
   val authHeader = RawHeader("Authorization", f"Bot $token");
 
   val request = HttpRequest(
