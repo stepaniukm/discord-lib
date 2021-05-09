@@ -36,25 +36,7 @@ object OutgoingEventDataFormat {
 
   implicit val outgoingEventDataFormat = new JsonFormat[OutgoingEventData] {
     override def write(obj: OutgoingEventData): JsValue = obj match {
-      case IdentityEventData(
-            _,
-            token,
-            intents,
-            properties,
-            compress,
-            large_threshold,
-            shard,
-            presence
-          ) =>
-        JsObject(
-          "token" -> token.toJson,
-          "intents" -> intents.toJson,
-          "properties" -> properties.toJson,
-          "compress" -> compress.toJson,
-          "large_threshold" -> large_threshold.toJson,
-          "shard" -> shard.toJson,
-          "presence" -> presence.toJson
-        )
+      case obj: IdentityEventData => obj.toJson
     }
 
     override def read(json: JsValue): OutgoingEventData = {
