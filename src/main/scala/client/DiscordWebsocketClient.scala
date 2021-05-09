@@ -1,16 +1,16 @@
 package client
 
-import akka.actor.ActorSystem
+import akka.NotUsed
+import akka.actor.typed.{ActorRef, Behavior, Terminated}
+import akka.actor.typed.scaladsl.Behaviors
 import akka.http.scaladsl.model.ws.TextMessage
 import akka.http.scaladsl.unmarshalling.Unmarshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
-import akka.stream.QueueOfferResult
 import akka.stream.scaladsl.Sink
+import client.DiscordMessageConsumerActor.ReceiveMessage
 import client.WebsocketClientTypes.WebsocketMessageSinkFactory
-import client.websocket.{HelloEventData, IdentityEventData, IdentityProperties, IncomingDiscordMessage, OutgoingDiscordMessage, ReadyEventData, outgoingDiscordMessageFormat}
+import client.websocket.{IncomingDiscordMessage, OutgoingDiscordMessage}
 
-import scala.concurrent.Future
-import scala.concurrent.duration._
 
 case class DiscordWebsocketClientConfig(
   gatewayUrl: String = "wss://gateway.discord.gg/?v=9&encoding=json",
@@ -20,64 +20,11 @@ case class DiscordWebsocketClientConfig(
 class DiscordWebsocketClient(config: DiscordWebsocketClientConfig) {
   type SendMessageFn = (OutgoingDiscordMessage) => Unit;
 
-  implicit val system: ActorSystem = ActorSystem("websocket")
+  implicit val system = akka.actor.ActorSystem("websocket")
 
   import system.dispatcher
 
-  def createOutgoingPayloadHeartbeat(lastSeenSequenceNumber: Option[Int]) =
-    OutgoingDiscordMessage(op = 1) // TODO: Pass lastSeenSequenceNumber
-
-  def createIdentityPayload() = OutgoingDiscordMessage(
-    op = 2,
-    d = Right(
-      Some(
-        IdentityEventData(
-          token = config.token,
-          intents = 32767,
-          properties = IdentityProperties(
-            $os = "Windows",
-            $browser = "disco",
-            $device = "disco"
-          ),
-          shard = Some((0, 1)),
-          compress = Some(false),
-          large_threshold = Some(250)
-        )
-      )
-    )
-  )
-
-  def createHeartbeatScheduler(milliseconds: Int)(func: => Unit) = {
-    system.scheduler.scheduleAtFixedRate(
-      0.seconds,
-      milliseconds.milliseconds
-    ) { () => {
-      println("scheduling")
-      func
-    }
-    }
-  }
-
-  def onDiscordMessage(
-    sendMessage: SendMessageFn
-  )(message: IncomingDiscordMessage) = {
-    message.d.map { (optionalData) =>
-      optionalData.map {
-        case ReadyEventData(v, user, guilds, session_id, shard) => {
-          println("##############################################")
-          println("I'm ready!")
-          println("##############################################")
-        }
-        case HelloEventData(heartbeat_interval) => {
-          createHeartbeatScheduler(heartbeat_interval) {
-            sendMessage(createOutgoingPayloadHeartbeat(None));
-          }
-
-          sendMessage(createIdentityPayload())
-        }
-      }
-    }
-  }
+  var messageConsumerActor: Option[ActorRef[DiscordMessageConsumerActor.ReceiveMessage]] = None;
 
   val messageSinkFactory: WebsocketMessageSinkFactory = (queue) => Sink.foreach {
     case message: TextMessage.Strict => {
@@ -85,32 +32,10 @@ class DiscordWebsocketClient(config: DiscordWebsocketClientConfig) {
       val parsed = Unmarshal(message.text).to[IncomingDiscordMessage];
       Debug.log("Received parsed:", parsed);
 
-      val offerDebugLog = (m: OutgoingDiscordMessage, f: Future[QueueOfferResult]) => {
-        val eventType = m.d.fold(
-          l => s"String(${l})",
-          r => r.getOrElse(None).getClass.getName
-        );
-        f.map {
-          case QueueOfferResult.Enqueued =>
-            Debug.log(s"${eventType} enqueued")
-          case QueueOfferResult.Dropped =>
-            Debug.log(s"${eventType} dropped")
-          case QueueOfferResult.Failure(ex) =>
-            Debug.log(s"${eventType} Offer failed ${ex.getMessage}")
-          case QueueOfferResult.QueueClosed =>
-            Debug.log(s"${eventType} Source Queue closed")
-        }
+      messageConsumerActor match {
+        case Some(actor) => parsed.map(p => actor ! ReceiveMessage(p, config))
+        case None => Debug.log("Actor not initialized yet")
       }
-
-      val sendMessageFn: SendMessageFn = (outgoingDiscordMessage) => {
-        val jsonString = outgoingDiscordMessageFormat.write(outgoingDiscordMessage).toString();
-        val message = TextMessage(jsonString)
-
-        val future = queue.offer(message)
-        offerDebugLog(outgoingDiscordMessage, future);
-      }
-
-      parsed.map(onDiscordMessage(sendMessageFn))
     }
   };
 
@@ -120,5 +45,35 @@ class DiscordWebsocketClient(config: DiscordWebsocketClientConfig) {
     messageSinkFactory
   ))
 
-  def run(): Unit = websocketClient.run()
+  def run(): Unit = {
+    websocketClient.run()
+
+    // careful, we're using akka Typed as opposed to Classic above
+    akka.actor.typed.ActorSystem(createActors(), "websocket-processing");
+  }
+
+  def createActors(): Behavior[NotUsed] =
+    Behaviors.setup { context =>
+      val messageQueueActor = context.spawn(DiscordMessageQueueActor.create(this.websocketClient.queue), "messageQueueActor")
+      val messageConsumerActor = context.spawn(DiscordMessageConsumerActor(messageQueueActor), "messageConsumerActor")
+      this.messageConsumerActor = Some(messageConsumerActor);
+      context.watch(messageConsumerActor)
+
+      Behaviors.receiveSignal {
+        case (_, Terminated(_)) =>
+          Behaviors.stopped
+      }
+    }
+}
+
+object Printer {
+
+  case class PrintMe(message: String)
+
+  def apply(): Behavior[PrintMe] =
+    Behaviors.receive {
+      case (context, PrintMe(message)) =>
+        context.log.info(message)
+        Behaviors.same
+    }
 }

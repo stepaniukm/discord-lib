@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
     libraryDependencies += scalaTest % Test
   )
 
-val AkkaVersion = "2.6.8"
+val AkkaVersion = "2.6.14"
 val AkkaHttpVersion = "10.2.4"
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.4.1",
