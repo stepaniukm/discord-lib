@@ -2,9 +2,7 @@ package client.websocket
 
 import spray.json._
 import spray.json.DefaultJsonProtocol._
-import spray.json.{JsonFormat, JsValue, JsObject, JsNumber}
-import akka.http.scaladsl.unmarshalling.Unmarshal
-import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import spray.json.{JsonFormat, JsValue, JsObject}
 
 sealed trait OutgoingEventData
 

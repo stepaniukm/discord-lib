@@ -11,21 +11,19 @@ import client.websocket.{
   ReadyEventData
 }
 import akka.actor.ActorSystem
-import akka.{Done, NotUsed}
+import akka.{Done}
 import akka.http.scaladsl.Http
 import akka.stream.scaladsl._
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.model.ws._
-import akka.http.scaladsl.marshalling.Marshal
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import akka.stream.{QueueOfferResult, OverflowStrategy}
 
-import scala.concurrent.{Future, Promise}
+import scala.concurrent.{Future}
 import scala.concurrent.duration._
 import spray.json.DefaultJsonProtocol._
 
 import scala.util.{Failure, Success}
-import spray.json._
 import akka.http.scaladsl.unmarshalling.Unmarshal
 
 case class IncomingDiscordMessage(
@@ -101,26 +99,24 @@ class WebsocketClient(config: WebsocketClientConfig) {
       queue: SourceQueue[OutgoingDiscordMessage]
   )(message: IncomingDiscordMessage) = {
     message.d.map { (optionalData) =>
-      optionalData.map { (data) =>
-        data match {
-          case ReadyEventData(v, user, guilds, session_id, shard) => {
-            println("##############################################")
-            println("I'm ready!")
-            println("##############################################")
-          }
-          case HelloEventData(heartbeat_interval) => {
-            createHeartbeatScheduler(heartbeat_interval) {
-              queue.offer(createOutgoingPayloadHeartbeat(None)).map {
-                case QueueOfferResult.Enqueued => println(s"enqueued")
-                case QueueOfferResult.Dropped  => println(s"dropped")
-                case QueueOfferResult.Failure(ex) =>
-                  println(s"Offer failed ${ex.getMessage}")
-                case QueueOfferResult.QueueClosed =>
-                  println("Source Queue closed")
-              }
+      optionalData.map {
+        case ReadyEventData(v, user, guilds, session_id, shard) => {
+          println("##############################################")
+          println("I'm ready!")
+          println("##############################################")
+        }
+        case HelloEventData(heartbeat_interval) => {
+          createHeartbeatScheduler(heartbeat_interval) {
+            queue.offer(createOutgoingPayloadHeartbeat(None)).map {
+              case QueueOfferResult.Enqueued => println(s"enqueued")
+              case QueueOfferResult.Dropped => println(s"dropped")
+              case QueueOfferResult.Failure(ex) =>
+                println(s"Offer failed ${ex.getMessage}")
+              case QueueOfferResult.QueueClosed =>
+                println("Source Queue closed")
             }
-            queue.offer(createIdentityPayload)
           }
+          queue.offer(createIdentityPayload)
         }
       }
     }
