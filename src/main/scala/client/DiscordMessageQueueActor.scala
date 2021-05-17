@@ -12,7 +12,7 @@ object DiscordMessageQueueActor {
   def apply(queue: SourceQueue[Message]): Behavior[EnqueueOutgoingMessage] = {
     Behaviors.receive { (context, message) =>
       context.log.info("Got {}", message);
-      // TODO: This will probably error if called from multiple threads :(
+      // TODO: Handle errors
       queue.offer(TextMessage(message.text));
 
       Behaviors.same
