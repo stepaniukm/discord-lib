@@ -20,7 +20,8 @@ case class WebsocketClientConfig(
 
 object WebsocketQueueConfig {
   val bufferSize = 1000
-  val overflowStrategy = OverflowStrategy.backpressure
+  val overflowStrategy: OverflowStrategy = OverflowStrategy.backpressure
+  val maxConcurrency = 16
 }
 
 object WebsocketClientTypes {
@@ -35,7 +36,8 @@ class WebsocketClient(config: WebsocketClientConfig) {
   val (queue, source) = Source
     .queue[Message](
       WebsocketQueueConfig.bufferSize,
-      WebsocketQueueConfig.overflowStrategy
+      WebsocketQueueConfig.overflowStrategy,
+      WebsocketQueueConfig.maxConcurrency
     )
     .preMaterialize();
 
